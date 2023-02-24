@@ -1,8 +1,6 @@
 <template>
   <div class="side-bar">
     <router-link v-for="item in menuItems" :key="item.id" :to="item.link" class="side-bar__menu-item">{{ item.name }}</router-link>
-
-    <!-- <a v-for="(item, index) in menuItems" :key="index" :href="item.link" class="side-bar__menu-item">{{ item.name }}</a> -->
   </div>
 </template>
 

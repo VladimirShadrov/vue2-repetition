@@ -2,7 +2,9 @@
 <template>
   <div class="container">
     <app-component-side-bar />
-    <div class="content-bar">Компоненты</div>
+    <div class="content-bar">
+      <router-view />
+    </div>
   </div>
 </template>
 

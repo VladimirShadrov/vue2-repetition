@@ -1,6 +1,6 @@
 <template>
   <div class="side-bar">
-    <a v-for="(item, index) in menuItems" :key="index" :href="item.link" class="side-bar__menu-item">{{ item.name }}</a>
+    <router-link v-for="item in menuItems" :key="item.id" :to="item.link" class="side-bar__menu-item">{{ item.name }}</router-link>
   </div>
 </template>
 
@@ -11,20 +11,32 @@ export default {
     return {
       menuItems: [
         {
-          name: 'Динамические атрибуты',
-          link: '/base/atributes',
+          name: 'Локальная и глобальная регистрация',
+          link: '/registration',
         },
         {
-          name: 'Вывод HTML кода',
-          link: '/base/v-html',
+          name: 'Названия компонентов',
+          link: '/component-title',
         },
         {
-          name: 'Работа с событиями',
-          link: '/base/events',
+          name: 'Передача параметров компоненту',
+          link: '/props',
         },
         {
-          name: 'Передача параметров в метод',
-          link: '/base/method-attributes',
+          name: 'Передача параметров от дочернего компонента',
+          link: '/emit',
+        },
+        {
+          name: 'Связь дочерних компонентов',
+          link: '/children',
+        },
+        {
+          name: 'Использование event emitter',
+          link: '/emitter',
+        },
+        {
+          name: 'Изолированные стили',
+          link: '/scoped',
         },
       ],
     };

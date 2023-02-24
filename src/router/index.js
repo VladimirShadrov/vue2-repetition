@@ -16,6 +16,13 @@ import AppInstance from '../components/base/pages/AppInstance.vue';
 import AppRef from '../components/base/pages/AppRef.vue';
 import AppTemplate from '../components/base/pages/AppTemplate.vue';
 import AppLifeCycle from '../components/base/pages/AppLifeCycle.vue';
+import AppRegistration from '../components/components/pages/AppRegistration.vue';
+import AppComponentsInfo from '../components/components/pages/AppComponents.vue';
+import AppProps from '../components/components/pages/AppProps.vue';
+import AppEmit from '../components/components/pages/AppEmit.vue';
+import AppChildren from '../components/components/pages/AppChildren.vue';
+import AppEmitter from '../components/components/pages/AppEmitter.vue';
+import AppScoped from '../components/components/pages/AppScoped.vue';
 
 Vue.use(VueRouter);
 
@@ -85,6 +92,36 @@ const routes = [
   {
     path: '/components',
     component: AppComponents,
+    children: [
+      {
+        path: '/registration',
+        component: AppRegistration,
+      },
+      {
+        path: '/component-title',
+        component: AppComponentsInfo,
+      },
+      {
+        path: '/props',
+        component: AppProps,
+      },
+      {
+        path: '/emit',
+        component: AppEmit,
+      },
+      {
+        path: '/children',
+        component: AppChildren,
+      },
+      {
+        path: '/emitter',
+        component: AppEmitter,
+      },
+      {
+        path: '/scoped',
+        component: AppScoped,
+      },
+    ],
   },
 ];
 
