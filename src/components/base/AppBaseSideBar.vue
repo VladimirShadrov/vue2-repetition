@@ -1,6 +1,8 @@
 <template>
   <div class="side-bar">
-    <a v-for="(item, index) in menuItems" :key="index" :href="item.link" class="side-bar__menu-item">{{ item.name }}</a>
+    <router-link v-for="item in menuItems" :key="item.id" :to="item.link" class="side-bar__menu-item">{{ item.name }}</router-link>
+
+    <!-- <a v-for="(item, index) in menuItems" :key="index" :href="item.link" class="side-bar__menu-item">{{ item.name }}</a> -->
   </div>
 </template>
 
@@ -12,59 +14,59 @@ export default {
       menuItems: [
         {
           name: 'Динамические атрибуты',
-          link: '/base/atributes',
+          link: '/atributes',
         },
         {
           name: 'Вывод HTML кода',
-          link: '/base/v-html',
+          link: '/v-html',
         },
         {
           name: 'Работа с событиями',
-          link: '/base/events',
+          link: '/events',
         },
         {
           name: 'Передача параметров в метод',
-          link: '/base/method-attributes',
+          link: '/arguments',
         },
         {
           name: 'Ярлыки для директив',
-          link: '/base/directives-label',
+          link: '/labels',
         },
         {
           name: 'Модель для работы с формами',
-          link: '/base/v-model',
+          link: '/v-model',
         },
         {
           name: 'Работа со стилями и классами',
-          link: '/base/styles',
+          link: '/styles',
         },
         {
           name: 'Управление отображением элементов',
-          link: '/base/v-if_v-show',
+          link: '/v-if_v-show',
         },
         {
           name: 'Computed',
-          link: '/base/computed',
+          link: '/computed',
         },
         {
           name: 'Watch',
-          link: '/base/watch',
+          link: '/watch',
         },
         {
           name: 'Связывание разных приложений. Инстанс vue',
-          link: '/base/vue-instance',
+          link: '/vue-instance',
         },
         {
           name: 'Доступ к DOM элементам',
-          link: '/base/ref',
+          link: '/ref',
         },
         {
           name: 'Свойство template',
-          link: '/base/template',
+          link: '/template',
         },
         {
           name: 'Жизненный цикл',
-          link: '/base/life-cycle',
+          link: '/life-cycle',
         },
       ],
     };
