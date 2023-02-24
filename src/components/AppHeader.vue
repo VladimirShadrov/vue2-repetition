@@ -4,7 +4,7 @@
       <h1>Vue 2</h1>
     </div>
     <div class="menu">
-      <a v-for="item in menuItems" :key="item.id" :href="item.link" class="menu__item">{{ item.name }}</a>
+      <router-link v-for="item in menuItems" :key="item.id" :to="item.link" class="menu__item">{{ item.name }}</router-link>
     </div>
   </div>
 </template>

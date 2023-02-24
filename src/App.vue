@@ -1,17 +1,15 @@
 <template>
   <div id="app">
     <app-header />
-    <app-base />
+    <router-view />
+    <h1 class="content__theme-title">Для начала работы выбери пункт меню</h1>
   </div>
 </template>
 
 <script>
 import AppHeader from './components/AppHeader.vue';
-import AppBase from './components/base/AppBase.vue';
-
 export default {
-  name: 'App',
-  components: { AppHeader, AppBase },
+  components: { AppHeader },
 };
 </script>
 
@@ -62,6 +60,6 @@ body,
 
 .content__theme-title {
   text-align: center;
-  margin-top: 15px;
+  margin: 15px 0;
 }
 </style>
