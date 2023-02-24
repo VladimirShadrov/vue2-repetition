@@ -21,13 +21,18 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
+html,
+body,
+#app {
+  min-height: 100vh;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
 }
 .container {
   display: flex;
   justify-content: flex-start;
-  min-height: 100vh;
+  min-height: calc(100vh - 69px);
 }
 
 .side-bar {
@@ -52,5 +57,11 @@ export default {
 
 .content-bar {
   padding: 16px;
+  width: 80%;
+}
+
+.content__theme-title {
+  text-align: center;
+  margin-top: 15px;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Ярлыки для директив</h1>
+    <h1 class="content__theme-title">Ярлыки для директив</h1>
   </div>
 </template>
 

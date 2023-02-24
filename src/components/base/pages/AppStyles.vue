@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Работа с классами и стилями</h1>
+    <h1 class="content__theme-title">Работа с классами и стилями</h1>
   </div>
 </template>
 

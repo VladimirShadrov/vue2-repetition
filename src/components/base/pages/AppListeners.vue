@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Работа с событиями</h1>
+    <h1 class="content__theme-title">Работа с событиями</h1>
   </div>
 </template>
 

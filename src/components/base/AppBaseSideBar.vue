@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'app-side-bar',
+  name: 'app-base-side-bar',
   data() {
     return {
       menuItems: [

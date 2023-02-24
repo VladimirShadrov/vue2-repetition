@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Жизненный цикл</h1>
+    <h1 class="content__theme-title">Жизненный цикл</h1>
   </div>
 </template>
 

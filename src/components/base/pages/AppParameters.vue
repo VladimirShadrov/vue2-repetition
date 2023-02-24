@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Передача параметров в метод</h1>
+    <h1 class="content__theme-title">Передача параметров в метод</h1>
   </div>
 </template>
 

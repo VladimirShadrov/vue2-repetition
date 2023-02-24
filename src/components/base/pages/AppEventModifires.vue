@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Динамические атрибуты</h1>
+    <h1 class="content__theme-title">Динамические атрибуты</h1>
   </div>
 </template>
 

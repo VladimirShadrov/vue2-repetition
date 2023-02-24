@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Оптимизация приложения с computed</h1>
+    <h1 class="content__theme-title">Оптимизация приложения с computed</h1>
   </div>
 </template>
 

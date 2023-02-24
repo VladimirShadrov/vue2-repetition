@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Управление отображением элементов</h1>
+    <h1 class="content__theme-title">Управление отображением элементов</h1>
   </div>
 </template>
 

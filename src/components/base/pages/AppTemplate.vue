@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Свойство template</h1>
+    <h1 class="content__theme-title">Свойство template</h1>
   </div>
 </template>
 

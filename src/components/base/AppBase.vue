@@ -1,7 +1,7 @@
 !
 <template>
   <div class="container">
-    <app-side-bar />
+    <app-base-side-bar />
     <div class="content-bar">
       <app-dynamic-attributes />
     </div>
@@ -9,11 +9,11 @@
 </template>
 
 <script>
-import AppSideBar from './AppSideBar.vue';
+import AppBaseSideBar from './AppBaseSideBar.vue';
 import AppDynamicAttributes from './pages/AppAttributes.vue';
 
 export default {
-  components: { AppSideBar, AppDynamicAttributes },
+  components: { AppBaseSideBar, AppDynamicAttributes },
 };
 </script>
 

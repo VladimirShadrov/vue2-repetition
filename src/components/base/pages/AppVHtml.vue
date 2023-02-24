@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Вывод HTML кода</h1>
+    <h1 class="content__theme-title">Вывод HTML кода</h1>
   </div>
 </template>
 
