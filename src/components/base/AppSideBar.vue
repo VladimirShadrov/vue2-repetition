@@ -19,16 +19,12 @@ export default {
           link: '/base/v-html',
         },
         {
-          name: 'Добавление событий',
+          name: 'Работа с событиями',
           link: '/base/events',
         },
         {
           name: 'Передача параметров в метод',
           link: '/base/method-attributes',
-        },
-        {
-          name: 'Модификаторы событий',
-          link: '/base/event-modify',
         },
         {
           name: 'Ярлыки для директив',

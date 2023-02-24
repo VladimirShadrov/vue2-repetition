@@ -5,7 +5,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: 'app-dynamic-attributes',
+};
 </script>
 
 <style></style>

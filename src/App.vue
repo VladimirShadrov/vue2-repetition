@@ -32,7 +32,7 @@ export default {
 
 .side-bar {
   width: 20%;
-  border-right: 1px solid black;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
   padding: 16px 0;
 }
 
