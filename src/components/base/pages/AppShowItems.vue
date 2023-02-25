@@ -73,7 +73,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .input,
 .button {
   padding: 4px 8px;
