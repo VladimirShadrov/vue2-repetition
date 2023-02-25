@@ -23,10 +23,6 @@ export default {
           link: '/events',
         },
         {
-          name: 'Передача параметров в метод',
-          link: '/arguments',
-        },
-        {
           name: 'Ярлыки для директив',
           link: '/labels',
         },

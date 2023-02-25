@@ -5,7 +5,6 @@ import AppComponents from '../components/components/AppComponents.vue';
 import AppDynamicAttributes from '../components/base/pages/AppAttributes.vue';
 import AppVHtml from '../components/base/pages/AppVHtml.vue';
 import AppEvents from '../components/base/pages/AppEvents.vue';
-import AppArguments from '../components/base/pages/AppArguments.vue';
 import AppDirectivesLabels from '../components/base/pages/AppDirectivesLabels.vue';
 import AppVModel from '../components/base/pages/AppVModel.vue';
 import AppStyles from '../components/base/pages/AppStyles.vue';
@@ -42,10 +41,6 @@ const routes = [
       {
         path: '/events',
         component: AppEvents,
-      },
-      {
-        path: '/arguments',
-        component: AppArguments,
       },
       {
         path: '/labels',
