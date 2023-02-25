@@ -9,6 +9,7 @@ import AppDirectivesLabels from '../components/base/pages/AppDirectivesLabels.vu
 import AppVModel from '../components/base/pages/AppVModel.vue';
 import AppStyles from '../components/base/pages/AppStyles.vue';
 import AppShowItems from '../components/base/pages/AppShowItems.vue';
+import AppLists from '../components/base/pages/AppLists.vue';
 import AppComputed from '../components/base/pages/AppComputed.vue';
 import AppWatch from '../components/base/pages/AppWatch.vue';
 import AppInstance from '../components/base/pages/AppInstance.vue';
@@ -57,6 +58,10 @@ const routes = [
       {
         path: '/v-if_v-show',
         component: AppShowItems,
+      },
+      {
+        path: '/lists',
+        component: AppLists,
       },
       {
         path: '/computed',

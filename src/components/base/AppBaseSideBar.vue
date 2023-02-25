@@ -39,6 +39,10 @@ export default {
           link: '/v-if_v-show',
         },
         {
+          name: 'Работа со списками',
+          link: '/lists',
+        },
+        {
           name: 'Computed',
           link: '/computed',
         },
