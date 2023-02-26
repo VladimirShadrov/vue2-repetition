@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="content__theme-title">Отслеживание изменений с watch</h1>
+    <h1 class="content__theme-title">Отслеживание изменений с Watch</h1>
     <br />
 
     <h3>Компонент: AppWatch.vue</h3>
