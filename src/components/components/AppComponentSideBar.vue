@@ -15,10 +15,6 @@ export default {
           link: '/registration',
         },
         {
-          name: 'Названия компонентов',
-          link: '/component-title',
-        },
-        {
           name: 'Передача параметров компоненту',
           link: '/props',
         },

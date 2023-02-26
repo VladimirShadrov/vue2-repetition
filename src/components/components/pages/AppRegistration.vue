@@ -19,6 +19,22 @@
     <br /><br />
     <hr />
     <br />
+
+    <!-- Сюда добавить глобальный компонент -->
+
+    <br /><br />
+    <hr />
+    <br />
+
+    <h3>Тема: Названия для компонентов</h3>
+    <br />
+
+    <h4>
+      Допускается именование в стилях: <br /><br />
+      - kebab-case - 'my-component-name' (все символы в нижнем регистре, должен содержать дефис) <br /><br />
+      - camel-case - 'myComponentName' <br /><br />
+      - PascalCase - 'MyComponentName'
+    </h4>
   </div>
 </template>
 

@@ -17,7 +17,6 @@ import AppRef from '../components/base/pages/AppRef.vue';
 import AppTemplate from '../components/base/pages/AppTemplate.vue';
 import AppLifeCycle from '../components/base/pages/AppLifeCycle.vue';
 import AppRegistration from '../components/components/pages/AppRegistration.vue';
-import AppComponentsInfo from '../components/components/pages/AppComponents.vue';
 import AppProps from '../components/components/pages/AppProps.vue';
 import AppEmit from '../components/components/pages/AppEmit.vue';
 import AppChildren from '../components/components/pages/AppChildren.vue';
@@ -96,10 +95,6 @@ const routes = [
       {
         path: '/registration',
         component: AppRegistration,
-      },
-      {
-        path: '/component-title',
-        component: AppComponentsInfo,
       },
       {
         path: '/props',
