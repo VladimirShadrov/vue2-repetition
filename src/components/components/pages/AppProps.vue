@@ -16,30 +16,39 @@
       - В дочернем компоненте TestCarComponent.vue принять параметри в виде массива и в виде объекта <br />
       - Провести валидацию параметров в дочернем компоненте с помощью указания типа данных и передачи объекта с настройками (тип данных, значение
       по-умолчанию) <br />
-      - <br />
-      - <br />
-      - <br />
     </h4>
     <br />
 
-    <h2>Я родительский компонент</h2>
+    <h4>
+      Задача 2 <br />
+      - Передать в дочерний компонент как параметр функцию, которая будет изменять название машины на Audi <br />
+      - При клике на кнопке "Изменить имя" в дочернем компоненте должно измениться название машины у ребенка и родителя <br />
+    </h4>
     <br />
 
-    <test-car-component :title="title" :year="year" />
+    <h2>{{ title }}</h2>
+    <br />
+
+    <test-car-1 :title="title" :year="year" :func="changeToAudi" />
   </div>
 </template>
 
 <script>
-import TestCarComponent from './testComponents/TestCarComponent.vue';
+import TestCar1 from './testComponents/TestCar1.vue';
 
 export default {
-  components: { TestCarComponent },
+  components: { TestCar1 },
   name: 'app-props',
   data() {
     return {
       title: 'Ford',
       year: 2022,
     };
+  },
+  methods: {
+    changeToAudi() {
+      this.title = 'Audi';
+    },
   },
 };
 </script>

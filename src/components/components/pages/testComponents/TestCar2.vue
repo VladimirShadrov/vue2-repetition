@@ -1,26 +1,20 @@
 <template>
   <div class="car">
-    <h3 style="margin-bottom: 16px">Я дочерний компонент</h3>
+    <h3 style="margin-bottom: 16px">Я дочерний компонент 2</h3>
     <h2 class="car-title">Марка: {{ title }}</h2>
     <h4>Год выпуска: {{ year }}</h4>
+    <br />
+
+    <button @click="changeName" class="button">Изменить</button>
   </div>
 </template>
 
 <script>
 export default {
-  //   props: ['title', 'year'],
-  //   props: {
-  //     title: String,
-  //     year: Number,
-  //   },
-  props: {
-    title: {
-      type: String,
-      default: 'Другое назавание',
-    },
-    year: {
-      type: Number,
-      default: 777,
+  props: ['title', 'year'],
+  methods: {
+    changeName() {
+      this.$emit('changeTitle', { title: 'BMW', year: 2011 });
     },
   },
 };
