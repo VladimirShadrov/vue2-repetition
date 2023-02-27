@@ -6,17 +6,19 @@
     <br />
 
     <button class="button">Изменить</button>
-    <button @click="addCounter" class="button">Увеличить счетчик</button>
+    <button @click="addToCounter" class="button">Увеличить счетчик</button>
   </div>
 </template>
 
 <script>
+import { eventBus } from '@/main';
+
 export default {
   name: 'test-car-1',
   props: ['model', 'year'],
   methods: {
-    addCounter() {
-      this.$emit('addCounter', 1);
+    addToCounter() {
+      eventBus.$emit('updateCounter', 1);
     },
   },
 };

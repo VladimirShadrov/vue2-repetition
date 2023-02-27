@@ -3,7 +3,7 @@
     <h2>Я глобальный счетчик</h2>
     <br />
     <div>
-      Счетчик: <b>{{ counterValue }}</b>
+      Счетчик: <b>{{ counter }}</b>
     </div>
     <br /><br />
     <button class="button">Увеличить</button>
@@ -11,13 +11,19 @@
 </template>
 
 <script>
+import { eventBus } from '@/main';
+
 export default {
   name: 'my-global-counter',
-  props: ['counterValue'],
   data() {
     return {
       counter: 0,
     };
+  },
+  created() {
+    eventBus.$on('updateCounter', (num) => {
+      this.counter += num;
+    });
   },
 };
 </script>
