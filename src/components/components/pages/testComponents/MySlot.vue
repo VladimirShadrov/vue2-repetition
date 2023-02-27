@@ -1,9 +1,5 @@
 <template>
-  <div>
-    <slot name="header" />
-    <slot name="content" />
-    <slot name="footer" />
-  </div>
+  <div></div>
 </template>
 
 <script>
