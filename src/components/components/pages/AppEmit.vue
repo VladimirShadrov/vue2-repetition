@@ -18,28 +18,18 @@
 
     <h2>{{ title }}</h2>
     <br />
-
-    <test-car-2 :title="title" :year="year" @changeTitle="changeTitle" />
   </div>
 </template>
 
 <script>
-import TestCar2 from './testComponents/TestCar2.vue';
-
 export default {
   name: 'app-emit',
-  components: { TestCar2 },
+  components: {},
   data() {
     return {
       title: 'Mazda',
       year: 2021,
     };
-  },
-  methods: {
-    changeTitle(data) {
-      this.title = data.title;
-      this.year = data.year;
-    },
   },
 };
 </script>

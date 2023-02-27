@@ -1,32 +1,22 @@
 <template>
   <div class="car">
     <h3 style="margin-bottom: 16px">Я дочерний компонент 1</h3>
-    <h2 class="car-title">Марка: {{ title }}</h2>
+    <h2 class="car-title">Марка: {{ model }}</h2>
     <h4>Год выпуска: {{ year }}</h4>
     <br />
 
-    <button @click="func" class="button">Изменить</button>
+    <button class="button">Изменить</button>
+    <button @click="addCounter" class="button">Увеличить счетчик</button>
   </div>
 </template>
 
 <script>
 export default {
-  // props: ['title', 'year', 'func'],
-  //   props: {
-  //     title: String,
-  //     year: Number,
-  //   },
-  props: {
-    title: {
-      type: String,
-      default: 'Другое назавание',
-    },
-    year: {
-      type: Number,
-      default: 777,
-    },
-    func: {
-      type: Function,
+  name: 'test-car-1',
+  props: ['model', 'year'],
+  methods: {
+    addCounter() {
+      this.$emit('addCounter', 1);
     },
   },
 };
@@ -38,9 +28,14 @@ export default {
   border: 1px solid black;
   max-width: 500px;
   overflow: hidden;
+  margin-right: 16px;
 }
 
 .car-title {
   margin-bottom: 16px;
+}
+
+.button {
+  margin-right: 16px;
 }
 </style>

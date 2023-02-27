@@ -1,17 +1,19 @@
 <template>
-  <div>
-    <h2>Я глобальный компонент</h2>
+  <div style="padding: 16px; border: 1px solid black">
+    <h2>Я глобальный счетчик</h2>
     <br />
     <div>
-      Счетчик: <b>{{ counter }}</b>
+      Счетчик: <b>{{ counterValue }}</b>
     </div>
     <br /><br />
-    <button @click="counter++" class="button">Увеличить</button>
+    <button class="button">Увеличить</button>
   </div>
 </template>
 
 <script>
 export default {
+  name: 'my-global-counter',
+  props: ['counterValue'],
   data() {
     return {
       counter: 0,
@@ -20,4 +22,4 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped></style>

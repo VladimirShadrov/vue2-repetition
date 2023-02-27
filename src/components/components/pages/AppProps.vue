@@ -28,27 +28,18 @@
 
     <h2>{{ title }}</h2>
     <br />
-
-    <test-car-1 :title="title" :year="year" :func="changeToAudi" />
   </div>
 </template>
 
 <script>
-import TestCar1 from './testComponents/TestCar1.vue';
-
 export default {
-  components: { TestCar1 },
+  components: {},
   name: 'app-props',
   data() {
     return {
       title: 'Ford',
       year: 2022,
     };
-  },
-  methods: {
-    changeToAudi() {
-      this.title = 'Audi';
-    },
   },
 };
 </script>
