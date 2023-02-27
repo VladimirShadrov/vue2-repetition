@@ -21,7 +21,7 @@ import AppProps from '../components/components/pages/AppProps.vue';
 import AppEmit from '../components/components/pages/AppEmit.vue';
 import AppChildren from '../components/components/pages/AppChildren.vue';
 import AppEmitter from '../components/components/pages/AppEmitter.vue';
-import AppScoped from '../components/components/pages/AppScoped.vue';
+import AppSlot from '../components/components/pages/AppSlot.vue';
 
 Vue.use(VueRouter);
 
@@ -113,8 +113,8 @@ const routes = [
         component: AppEmitter,
       },
       {
-        path: '/scoped',
-        component: AppScoped,
+        path: '/slot',
+        component: AppSlot,
       },
     ],
   },

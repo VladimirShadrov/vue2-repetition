@@ -31,8 +31,8 @@ export default {
           link: '/emitter',
         },
         {
-          name: 'Изолированные стили',
-          link: '/scoped',
+          name: 'Передача HTML компоненту (slot)',
+          link: '/slot',
         },
       ],
     };
