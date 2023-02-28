@@ -1,8 +1,8 @@
 <template>
   <div class="car">
     <h3 style="margin-bottom: 16px">Я дочерний компонент 2</h3>
-    <h2 class="car-title">Марка: {{ model }}</h2>
-    <h4>Год выпуска: {{ year }}</h4>
+    <h2 class="car-title">Марка: {{}}</h2>
+    <h4>Год выпуска: {{}}</h4>
     <br />
 
     <button class="button">Изменить</button>
@@ -12,7 +12,6 @@
 <script>
 export default {
   methods: {},
-  inject: ['model', 'year'],
 };
 </script>
 

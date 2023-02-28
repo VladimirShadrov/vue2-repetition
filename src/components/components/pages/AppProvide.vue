@@ -14,29 +14,12 @@
       - В компоненте TestCar2.vue в свойство "Inject" принять данные и отрисовать в шаблоне <br />
     </h4>
     <br /><br />
-
-    <test-car-2 />
   </div>
 </template>
 
 <script>
-import TestCar2 from './testComponents/TestCar2.vue';
-
 export default {
   name: 'app-provide',
-  components: { TestCar2 },
-  data() {
-    return {
-      model: 'Vaz',
-      year: 1982,
-    };
-  },
-  provide() {
-    return {
-      model: this.model,
-      year: this.year,
-    };
-  },
 };
 </script>
 
