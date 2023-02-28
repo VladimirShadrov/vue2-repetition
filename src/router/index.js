@@ -23,6 +23,8 @@ import AppChildren from '../components/components/pages/AppChildren.vue';
 import AppEmitter from '../components/components/pages/AppEmitter.vue';
 import AppSlot from '../components/components/pages/AppSlot.vue';
 import AppProvide from '../components/components/pages/AppProvide.vue';
+import AppDirectives from '../components/directives/AppDirectives.vue';
+import AppCustomDirect from '../components/directives/pages/AppCustomDirect.vue';
 
 Vue.use(VueRouter);
 
@@ -120,6 +122,16 @@ const routes = [
       {
         path: '/provide',
         component: AppProvide,
+      },
+    ],
+  },
+  {
+    path: '/directives',
+    component: AppDirectives,
+    children: [
+      {
+        path: '/castom-directive',
+        component: AppCustomDirect,
       },
     ],
   },
