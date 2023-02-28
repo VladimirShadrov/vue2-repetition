@@ -22,6 +22,7 @@ import AppEmit from '../components/components/pages/AppEmit.vue';
 import AppChildren from '../components/components/pages/AppChildren.vue';
 import AppEmitter from '../components/components/pages/AppEmitter.vue';
 import AppSlot from '../components/components/pages/AppSlot.vue';
+import AppProvide from '../components/components/pages/AppProvide.vue';
 
 Vue.use(VueRouter);
 
@@ -115,6 +116,10 @@ const routes = [
       {
         path: '/slot',
         component: AppSlot,
+      },
+      {
+        path: '/provide',
+        component: AppProvide,
       },
     ],
   },

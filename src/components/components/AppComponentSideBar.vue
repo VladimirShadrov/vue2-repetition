@@ -34,6 +34,10 @@ export default {
           name: 'Передача HTML компоненту (slot)',
           link: '/slot',
         },
+        {
+          name: 'Provide / Inject',
+          link: '/provide',
+        },
       ],
     };
   },
