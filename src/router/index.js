@@ -25,6 +25,8 @@ import AppSlot from '../components/components/pages/AppSlot.vue';
 import AppProvide from '../components/components/pages/AppProvide.vue';
 import AppDirectives from '../components/directives/AppDirectives.vue';
 import AppCustomDirect from '../components/directives/pages/AppCustomDirect.vue';
+import AppDirParams from '../components/directives/pages/AppDirParams.vue';
+import AppDirLocal from '../components/directives/pages/AppDirLocal.vue';
 
 Vue.use(VueRouter);
 
@@ -132,6 +134,14 @@ const routes = [
       {
         path: '/castom-directive',
         component: AppCustomDirect,
+      },
+      {
+        path: '/dir-params',
+        component: AppDirParams,
+      },
+      {
+        path: '/dir-local',
+        component: AppDirLocal,
       },
     ],
   },

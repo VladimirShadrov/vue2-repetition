@@ -11,8 +11,16 @@ export default {
     return {
       menuItems: [
         {
-          name: 'Создание своей директивы',
+          name: 'Создание своей директивы, Глобальная регистрация',
           link: '/castom-directive',
+        },
+        {
+          name: 'Параметры, Аргументы, Модификаторы',
+          link: '/dir-params',
+        },
+        {
+          name: 'Локальная регистрация',
+          link: '/dir-local',
         },
       ],
     };

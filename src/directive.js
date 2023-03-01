@@ -1,13 +1,26 @@
 export const myDirective = {
-  /**
-   *
-   * @param {*} el - элемент, к которому будет применена директива
-   * @param {*} bindings (только для чтения)
-   * @param {*} vnode Нода виртуального дерева (только для чтения)
-   */
   bind(el, bindings, vnode) {
-    el.style.color = 'blue';
-    bindings;
+    const arg = bindings.arg;
+
+    const fontSizeModifire = bindings.modifiers['fontSize'];
+
+    if (fontSizeModifire) {
+      el.style[arg] = bindings.value;
+      el.style.fontSize = '40px';
+    }
+
+    let delay = 0;
+
+    const delayModifire = bindings.modifiers['delay'];
+
+    if (delayModifire) {
+      delay = 2000;
+
+      setTimeout(() => {
+        el.style[arg] = bindings.value;
+      }, delay);
+    }
+
     vnode;
   },
 };

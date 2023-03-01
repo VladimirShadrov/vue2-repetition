@@ -1,9 +1,9 @@
 <template>
   <div>
-    <h1 class="content__theme-title">Создание собственной директивы</h1>
+    <h1 class="content__theme-title">Локальная регистрация директивы</h1>
     <br />
 
-    <h3>Компонент: AppCustomDirect.vue</h3>
+    <h3>Компонент: AppDirLocal.vue</h3>
     <br />
 
     <h4>
