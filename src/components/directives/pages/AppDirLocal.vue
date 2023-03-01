@@ -8,52 +8,60 @@
 
     <h4>
       Задача: <br />
-      - В папке SRC создать файл directives.js <br />
-      - Создать в этом файле объект с названием директивы, которую хотим создать
-      <pre style="font-size: 18px">
-            <code >
-        export const myDirective = {
-            /**
-            *
-            * @param {*} el - элемент, к которому будет применена директива
-            * @param {*} bindings (только для чтения)
-            * @param {*} vnode Нода виртуального дерева (только для чтения)
-            */
-            bind(el, bindings, vnode) {
-                el.style.color = 'blue';
-                bindings;
-                vnode;
-            },
-        };
-            </code>
-        </pre>
-      - В файле main.js импортировать этот объект <br />
-      - До инициализации приложения вызвать у Vue метод "Vue.directive('directive-name', directive-object)" <br />
-      <pre style="font-size: 18px">
-            <code>
-    import { myDirective } from './directive
+      - Создать 2 заголовка <br />
+      - Создать локально 2 директивы.<br />
+      - Первая изменяет цвет элемента <br />
+      - У второй модификатор изменят цвет фона элемента <br />
+      - Применить директивы к двум заголовкам<br />
+    </h4>
+    <br />
 
-    Vue.directive('my-directive', myDirective);
-            </code>
-        </pre>
+    <h1 v-color="'blue'">Сделать цвет синим</h1>
+    <h1 v-fontBG:background="'red'">Сделать фон красным</h1>
+    <br />
 
-      - В объекте создать метод "bind(el, bindings, vnode)" <br />
-      - В созданном методе описать действа над элементом (el). Например: el.style.color = 'blue' <br />
-      - Применить директиву к элементу шаблона в компоненте. Пример:
+    <h4>
       <pre style="font-size: 18px">
         <code>
-            &lt;<span>h1</span>&gt;v-my-directive>Моя директива&lt;<span>/h1</span>&gt;
-        </code>
-      </pre>
-    </h4>
+    &lt;<span>h1</span>&gt;v-color="'blue'">Сделать цвет синима&lt;<span>/h1</span>&gt;
+    &lt;<span>h1</span>&gt;v-fontBG:background="'red'">Сделать фон красным&lt;<span>/h1</span>&gt;
 
-    <h1 v-my-directive>Моя директива</h1>
+    export default {
+        directives: {
+            color: {
+                bind(el, bindings) {
+                    el.style.color = bindings.value;
+                },
+            },
+            fontBG: {
+                bind(el, bindings) {
+                    const arg = bindings.arg;
+                    el.style[arg] = bindings.value;
+                },
+            },
+        },
+    };
+        </code>
+    </pre>
+    </h4>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'app-custom-directive',
+  directives: {
+    color: {
+      bind(el, bindings) {
+        el.style.color = bindings.value;
+      },
+    },
+    fontBG: {
+      bind(el, bindings) {
+        const arg = bindings.arg;
+        el.style[arg] = bindings.value;
+      },
+    },
+  },
 };
 </script>
 
