@@ -14,23 +14,20 @@
 </template>
 
 <script>
-import { filterMixin } from '@/myMixin.js';
-
 export default {
   name: 'test-mixin-2',
   data() {
     return {
       placeholder: 'Введите имя...',
-      //   names: ['Вова', 'Лена', 'Юля', 'Оля', 'Мария', 'Никита', 'Алена'],
-      //   inputValue: '',
+      names: ['Вова', 'Лена', 'Юля', 'Оля', 'Мария', 'Никита', 'Алена'],
+      inputValue: '',
     };
   },
-  //   computed: {
-  //     list() {
-  //       return this.names.filter((name) => name.toLowerCase().indexOf(this.inputValue.toLowerCase()) !== -1);
-  //     },
-  //   },
-  mixins: [filterMixin],
+  computed: {
+    list() {
+      return this.names.filter((name) => name.toLowerCase().indexOf(this.inputValue.toLowerCase()) !== -1);
+    },
+  },
 };
 </script>
 
