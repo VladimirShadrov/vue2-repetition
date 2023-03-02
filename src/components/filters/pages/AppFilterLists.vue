@@ -11,12 +11,12 @@
     </h3>
     <br /><br />
 
-    <input type="text" :placeholder="placeholder" v-model="inputValue" class="input" /><br /><br />
+    <input type="text" class="input" /><br /><br />
     <hr />
     <br />
 
-    <p v-for="name of list" :key="name" class="list-item">
-      <b>{{ name }}</b>
+    <p class="list-item">
+      <b>{{}}</b>
     </p>
   </div>
 </template>
@@ -30,11 +30,6 @@ export default {
       placeholder: 'Введите имя...',
       inputValue: '',
     };
-  },
-  computed: {
-    list() {
-      return this.names.filter((name) => name.toLowerCase().indexOf(this.inputValue.toLowerCase()) !== -1);
-    },
   },
 };
 </script>
