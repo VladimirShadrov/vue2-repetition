@@ -8,10 +8,6 @@ Vue.directive('my-directive', myDirective);
 
 Vue.config.productionTip = false;
 
-Vue.filter('reverseString', (value) => {
-  return value.split('').reverse().join('');
-});
-
 new Vue({
   router,
   render: (h) => h(App),
