@@ -16,7 +16,7 @@
     <br />
 
     <p class="list-item">
-      <b>{{}}</b>
+      <b>Сюда вывести список</b>
     </p>
   </div>
 </template>
