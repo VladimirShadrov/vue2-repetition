@@ -27,6 +27,10 @@ import AppDirectives from '../components/directives/AppDirectives.vue';
 import AppCustomDirect from '../components/directives/pages/AppCustomDirect.vue';
 import AppDirParams from '../components/directives/pages/AppDirParams.vue';
 import AppDirLocal from '../components/directives/pages/AppDirLocal.vue';
+import AppFilters from '../components/filters/AppFilters.vue';
+import AppMixins from '../components/filters/pages/AppMixins.vue';
+import AppFilterLists from '../components/filters/pages/AppFilterLists.vue';
+import AppSimpleFilters from '../components/filters/pages/AppSimpleFilters.vue';
 
 Vue.use(VueRouter);
 
@@ -142,6 +146,24 @@ const routes = [
       {
         path: '/dir-local',
         component: AppDirLocal,
+      },
+    ],
+  },
+  {
+    path: '/filters',
+    component: AppFilters,
+    children: [
+      {
+        path: '/easy-filter',
+        component: AppSimpleFilters,
+      },
+      {
+        path: '/filter-lists',
+        component: AppFilterLists,
+      },
+      {
+        path: '/use-mixins',
+        component: AppMixins,
       },
     ],
   },
