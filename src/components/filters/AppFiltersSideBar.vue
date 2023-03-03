@@ -11,14 +11,17 @@ export default {
     return {
       menuItems: [
         {
+          id: 1,
           name: 'Создание простых фильтров',
           link: '/easy-filter',
         },
         {
+          id: 2,
           name: 'Фильтрация списков',
           link: '/filter-lists',
         },
         {
+          id: 3,
           name: 'Использование миксинов',
           link: '/use-mixins',
         },
