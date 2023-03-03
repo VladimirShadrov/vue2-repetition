@@ -12,7 +12,7 @@
     <h1 ref="title">{{ title }}</h1>
     <br />
 
-    <button @click="changeColor" class="button">Изменить</button>
+    <button class="button">Изменить</button>
   </div>
 </template>
 
@@ -23,15 +23,9 @@ export default {
     return {
       title: 'Текст заголовка',
       changed: true,
-      change: true,
     };
   },
-  methods: {
-    changeColor() {
-      this.change = !this.change;
-      this.change ? (this.$refs.title.style.color = 'blue') : (this.$refs.title.style.color = 'purple');
-    },
-  },
+  methods: {},
 };
 </script>
 
