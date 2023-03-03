@@ -2,7 +2,6 @@
   <div id="app">
     <app-header />
     <router-view />
-    <!-- <h1 class="content__theme-title">Для начала работы выбери пункт меню</h1> -->
   </div>
 </template>
 
