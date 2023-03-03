@@ -13,7 +13,7 @@
     </h4>
     <br />
 
-    <h3 v-for="(person, index) of people" :key="person">{{ index + 1 }}. {{ person.name }}, {{ person.job }}</h3>
+    <h3></h3>
     <br /><br />
 
     <h4>
@@ -22,7 +22,7 @@
     </h4>
     <br />
 
-    <h3 v-for="(value, key, index) in person" :key="index">{{ index + 1 }}. {{ key }}: {{ value }}</h3>
+    <h3></h3>
   </div>
 </template>
 
