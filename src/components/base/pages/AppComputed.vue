@@ -32,12 +32,12 @@
     <h2>Счетчик: {{ counter1 }} / {{ counter2 }}</h2>
     <br />
 
-    <h4>Здесь вывести текст: {{ text }}</h4>
+    <h4>Здесь вывести текст: {{}}</h4>
     <br />
 
-    <button @click="counter1++" class="button">Увеличить счетчик 1</button>
-    <button @click="counter1--" class="button">Уменьшить счетчик 1</button>
-    <button @click="counter2++" class="button">Увеличить счетчик 2</button><br /><br />
+    <button class="button">Увеличить счетчик 1</button>
+    <button class="button">Уменьшить счетчик 1</button>
+    <button class="button">Увеличить счетчик 2</button><br /><br />
   </div>
 </template>
 
@@ -49,12 +49,6 @@ export default {
       counter1: 0,
       counter2: 0,
     };
-  },
-  computed: {
-    text() {
-      console.log(1);
-      return this.counter1 > 3 ? 'Значение больше 3' : 'Значение меньше 3';
-    },
   },
 };
 </script>
