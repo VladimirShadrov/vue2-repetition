@@ -24,7 +24,6 @@
 <script>
 export default {
   name: 'app-emit',
-  components: {},
   data() {
     return {
       title: 'Mazda',

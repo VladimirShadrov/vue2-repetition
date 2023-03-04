@@ -9,6 +9,7 @@
     <h4>
       Задача: <br />
       - Импортировать компоненты TestCar1.vue и MyGlobalCounter.vue <br />
+      - Передать в TestCar1.vue название машины и год выпуска <br />
       - При клике на кнопке "Увеличить счетчик" компонента TestCar1.vue увеличить счетчик в компоненте MyGlobalCounter.vue <br />
       - Связь дочерних компонентов через родительский <br />
     </h4>
@@ -18,8 +19,8 @@
     <br />
 
     <div class="wrapper">
-      <test-car-1 :model="model" :year="year" @addCounter="counter += $event" />
-      <my-global-counter :counterValue="counter" />
+      <test-car-1 />
+      <my-global-counter />
     </div>
   </div>
 </template>

@@ -20,6 +20,12 @@
 <script>
 export default {
   name: 'app-provide',
+  data() {
+    return {
+      model: 'KIA',
+      year: 2015,
+    };
+  },
 };
 </script>
 
