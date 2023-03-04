@@ -15,8 +15,8 @@
 
     <!-- РЕАЛИЗАЦИЯ -->
 
-    <select v-model="selected">
-      <option v-for="option in options" :key="option">{{ option }}</option>
+    <select>
+      <option></option>
     </select>
     <br /><br />
     <hr />
@@ -25,7 +25,7 @@
     <h4>Вы выбрали:</h4>
     <br />
 
-    <h4>{{ selected }}</h4>
+    <h4></h4>
   </div>
 </template>
 
@@ -35,7 +35,6 @@ export default {
   data() {
     return {
       options: ['Сырная', 'Мясная', 'Пеперони', 'Сырный цыпленок', 'Карбонара'],
-      selected: 'Сырный цыпленок',
     };
   },
 };
