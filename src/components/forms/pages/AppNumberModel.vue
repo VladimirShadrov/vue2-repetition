@@ -24,18 +24,13 @@
     <h4>Вы ввели число:</h4>
     <br />
 
-    <h4>{{ nums }}</h4>
+    <h4></h4>
   </div>
 </template>
 
 <script>
 export default {
   name: 'app-number-model',
-  data() {
-    return {
-      nums: '',
-    };
-  },
 };
 </script>
 
