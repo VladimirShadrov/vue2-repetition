@@ -31,6 +31,12 @@ import AppFilters from '../components/filters/AppFilters.vue';
 import AppMixins from '../components/filters/pages/AppMixins.vue';
 import AppFilterLists from '../components/filters/pages/AppFilterLists.vue';
 import AppSimpleFilters from '../components/filters/pages/AppSimpleFilters.vue';
+import AppForms from '../components/forms/AppForms.vue';
+import AppCheckbox from '../components/forms/pages/AppCheckbox.vue';
+import AppNumberModel from '../components/forms/pages/AppNumberModel.vue';
+import AppRadioBtn from '../components/forms/pages/AppRadioBtn.vue';
+import AppSelect from '../components/forms/pages/AppSelect.vue';
+import AppTextarea from '../components/forms/pages/AppTextarea.vue';
 
 Vue.use(VueRouter);
 
@@ -164,6 +170,32 @@ const routes = [
       {
         path: '/use-mixins',
         component: AppMixins,
+      },
+    ],
+  },
+  {
+    path: '/forms',
+    component: AppForms,
+    children: [
+      {
+        path: '/textarea',
+        component: AppTextarea,
+      },
+      {
+        path: '/checkbox',
+        component: AppCheckbox,
+      },
+      {
+        path: '/radio-buttons',
+        component: AppRadioBtn,
+      },
+      {
+        path: '/select',
+        component: AppSelect,
+      },
+      {
+        path: '/model-number',
+        component: AppNumberModel,
       },
     ],
   },
