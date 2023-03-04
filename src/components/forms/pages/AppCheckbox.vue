@@ -19,29 +19,24 @@
     <h2>Какую пиццу будем заказывать?</h2>
     <br /><br />
 
-    <label> <input type="checkbox" v-model="checked" value="Сырная" /> Сырная </label>
-    <label> <input type="checkbox" v-model="checked" value="Мясная" /> Мясная </label>
-    <label> <input type="checkbox" v-model="checked" value="Пеперони" /> Пеперони </label>
-    <label> <input type="checkbox" v-model="checked" value="Сырный цыпленок" /> Сырный цыпленок </label>
-    <label> <input type="checkbox" v-model="checked" value="Карбонара" /> Карбонара </label><br /><br /><br />
+    <label> <input type="checkbox" /> Сырная </label>
+    <label> <input type="checkbox" /> Мясная </label>
+    <label> <input type="checkbox" /> Пеперони </label>
+    <label> <input type="checkbox" /> Сырный цыпленок </label>
+    <label> <input type="checkbox" /> Карбонара </label><br /><br /><br />
     <hr />
     <br />
 
     <h4>Вы выбрали:</h4>
     <br />
 
-    <h4 v-for="item in checked" :key="item">{{ item }}</h4>
+    <h4></h4>
   </div>
 </template>
 
 <script>
 export default {
   name: 'app-checkbox',
-  data() {
-    return {
-      checked: ['Пеперони', 'Сырный цыпленок'],
-    };
-  },
 };
 </script>
 
