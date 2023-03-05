@@ -37,6 +37,14 @@ import AppNumberModel from '../components/forms/pages/AppNumberModel.vue';
 import AppRadioBtn from '../components/forms/pages/AppRadioBtn.vue';
 import AppSelect from '../components/forms/pages/AppSelect.vue';
 import AppTextarea from '../components/forms/pages/AppTextarea.vue';
+import AppRouter from '../components/routing/AppRouter.vue';
+import AppRouterSettings from '../components/routing/pages/AppRouterSettings.vue';
+
+// УЧЕБНЫЙ РОУТЕР
+import AppRout1 from '../components/routing/pages/routes/AppRout1';
+import AppRout2 from '../components/routing/pages/routes/AppRout2';
+import AppRout3 from '../components/routing/pages/routes/AppRout3';
+// УЧЕБНЫЙ РОУТЕР
 
 Vue.use(VueRouter);
 
@@ -196,6 +204,30 @@ const routes = [
       {
         path: '/model-number',
         component: AppNumberModel,
+      },
+    ],
+  },
+  {
+    path: '/router',
+    component: AppRouter,
+    children: [
+      {
+        path: '/router-settings',
+        component: AppRouterSettings,
+        children: [
+          {
+            path: '/page1',
+            component: AppRout1,
+          },
+          {
+            path: '/page2',
+            component: AppRout2,
+          },
+          {
+            path: '/page3',
+            component: AppRout3,
+          },
+        ],
       },
     ],
   },
