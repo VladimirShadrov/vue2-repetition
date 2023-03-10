@@ -20,27 +20,17 @@
     <br />
 
     <!-- СЮДА ВСТАВИТЬ КОМПОНЕНТ -->
-    <test-car-2 :model="title" :year="year" @changeData="changeData"></test-car-2>
   </div>
 </template>
 
 <script>
-import TestCar2 from './testComponents/TestCar2.vue';
-
 export default {
   name: 'app-emit',
-  components: { TestCar2 },
   data() {
     return {
       title: 'Mazda',
       year: 2021,
     };
-  },
-  methods: {
-    changeData(e) {
-      this.title = e.model;
-      this.year = e.year;
-    },
   },
 };
 </script>

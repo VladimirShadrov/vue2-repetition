@@ -5,7 +5,7 @@
     <h4>Год выпуска: {{ year }}</h4>
     <br />
 
-    <button @click="changeModel" class="button">Изменить</button>
+    <button class="button">Изменить</button>
   </div>
 </template>
 
@@ -18,14 +18,9 @@ export default {
   },
   data() {
     return {
-      // model: 'Mazda',
-      // year: 2001,
+      model: 'Mazda',
+      year: 2001,
     };
-  },
-  methods: {
-    changeModel() {
-      this.$emit('changeData', { model: 'BMV', year: 1985 });
-    },
   },
 };
 </script>
