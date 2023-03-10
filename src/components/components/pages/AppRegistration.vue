@@ -21,7 +21,6 @@
     <br />
 
     <!-- Сюда добавить глобальный компонент -->
-    <my-global-counter></my-global-counter>
 
     <br /><br />
     <hr />
@@ -40,9 +39,7 @@
 </template>
 
 <script>
-import MyGlobalCounter from './testComponents/MyGlobalCounter.vue';
 export default {
-  components: { MyGlobalCounter },
   name: 'app-registration',
   data() {
     return {
