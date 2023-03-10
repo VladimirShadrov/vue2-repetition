@@ -19,8 +19,8 @@
     <br />
 
     <div class="wrapper">
-      <test-car-1 />
-      <my-global-counter />
+      <test-car-1 :model="model" :year="year" @countPlus="changeCounter" />
+      <my-global-counter :counter="counter" />
     </div>
   </div>
 </template>
@@ -38,6 +38,11 @@ export default {
       model: 'Жигули',
       year: 1974,
     };
+  },
+  methods: {
+    changeCounter(e) {
+      this.counter += e;
+    },
   },
 };
 </script>

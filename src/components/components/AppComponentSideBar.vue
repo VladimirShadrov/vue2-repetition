@@ -38,6 +38,14 @@ export default {
           name: 'Provide / Inject',
           link: '/provide',
         },
+        {
+          name: 'Динамические компоненты',
+          link: '/dinamiccomponents',
+        },
+        {
+          name: 'Keep alive',
+          link: '/keep-alive',
+        },
       ],
     };
   },

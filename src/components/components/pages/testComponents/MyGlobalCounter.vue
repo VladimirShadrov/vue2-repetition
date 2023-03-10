@@ -11,6 +11,8 @@
 </template>
 
 <script>
+import { eventEmitter } from '../../../../main.js';
+
 export default {
   name: 'my-global-counter',
   data() {
