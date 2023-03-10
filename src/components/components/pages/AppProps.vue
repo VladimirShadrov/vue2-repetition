@@ -28,16 +28,12 @@
 
     <h2>{{ title }}</h2>
     <br />
-
-    <test-car-1></test-car-1>
   </div>
 </template>
 
 <script>
-import TestCar1 from './testComponents/TestCar1.vue';
 export default {
   name: 'app-props',
-  components: { TestCar1 },
   data() {
     return {
       title: 'Ford',
