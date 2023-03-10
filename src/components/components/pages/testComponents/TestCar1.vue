@@ -21,7 +21,7 @@ export default {
   },
   methods: {
     changeCounter() {
-      eventEmitter.$emit('plusCounter');
+      eventEmitter.$emit('plusCount', 1);
     },
   },
 };

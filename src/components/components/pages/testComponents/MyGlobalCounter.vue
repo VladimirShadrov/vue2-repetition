@@ -20,6 +20,11 @@ export default {
       counter: 0,
     };
   },
+  created() {
+    eventEmitter.$on('plusCount', (e) => {
+      this.counter += e;
+    });
+  },
 };
 </script>
 
