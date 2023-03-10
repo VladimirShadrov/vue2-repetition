@@ -28,17 +28,26 @@
 
     <h2>{{ title }}</h2>
     <br />
+
+    <test-car-1 :model="title" :year="year" :cb="changeTitle"></test-car-1>
   </div>
 </template>
 
 <script>
+import TestCar1 from './testComponents/TestCar1.vue';
 export default {
   name: 'app-props',
+  components: { TestCar1 },
   data() {
     return {
       title: 'Ford',
       year: 2022,
     };
+  },
+  methods: {
+    changeTitle() {
+      this.title = 'Audi';
+    },
   },
 };
 </script>
