@@ -13,8 +13,8 @@
     <br />
 
     <div class="wrapper">
-      <test-car-1 :model="model" :year="year" />
-      <my-global-counter />
+      <test-car-1></test-car-1>
+      <my-global-counter></my-global-counter>
     </div>
   </div>
 </template>

@@ -11,19 +11,12 @@
 </template>
 
 <script>
-import { eventEmitter } from '../../../../main.js';
-
 export default {
   name: 'my-global-counter',
   data() {
     return {
       counter: 0,
     };
-  },
-  created() {
-    eventEmitter.$on('plusCount', (e) => {
-      this.counter += e;
-    });
   },
 };
 </script>
