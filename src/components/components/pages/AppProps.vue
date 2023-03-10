@@ -29,7 +29,7 @@
     <h2>{{ title }}</h2>
     <br />
 
-    <test-car-1 :model="title" :year="year" :cb="changeTitle"></test-car-1>
+    <test-car-1></test-car-1>
   </div>
 </template>
 
@@ -43,11 +43,6 @@ export default {
       title: 'Ford',
       year: 2022,
     };
-  },
-  methods: {
-    changeTitle() {
-      this.title = 'Audi';
-    },
   },
 };
 </script>
