@@ -6,6 +6,13 @@
     <h3>Компонент: AppProvide.vue</h3>
     <br />
 
+    <h3>
+      Свойства Provide / Inject не реактивны. Во втором Vue писать костыли для того, чтобы добиться реактивности не рекомендуется, но возможно с
+      помощью Object.defineProperty <br />
+      В Vue 3 реактиврости Provide можно добиться с помощью Vue.computed(() => this.model)
+    </h3>
+    <br /><br />
+
     <h4>
       Задача: <br />
       - Импортировать компонент TestCar2.vue <br />
@@ -14,19 +21,42 @@
       - В компоненте TestCar2.vue в свойство "Inject" принять данные и отрисовать в шаблоне <br />
     </h4>
     <br /><br />
+
+    <!-- СЮДА ВСТАВИТЬ TestCar2 -->
+    <test-car-2></test-car-2>
   </div>
 </template>
 
 <script>
+import TestCar2 from './testComponents/TestCar2.vue';
+
 export default {
   name: 'app-provide',
+  components: { TestCar2 },
   data() {
     return {
       model: 'KIA',
       year: 2015,
     };
   },
+  provide() {
+    return {
+      model: this.model,
+      year: this.year,
+    };
+  },
+  methods: {
+    changeData() {
+      this.model = 'Запорожец';
+      this.year = 1968;
+    },
+  },
 };
 </script>
 
-<style></style>
+<style scoped>
+.button {
+  padding: 6px 8px;
+  cursor: pointer;
+}
+</style>

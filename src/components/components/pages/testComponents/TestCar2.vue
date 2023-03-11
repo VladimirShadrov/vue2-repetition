@@ -12,16 +12,13 @@
 <script>
 export default {
   name: 'test-car-2',
-  props: {
-    model: String,
-    year: Number,
-  },
   data() {
     return {
-      model: 'Mazda',
-      year: 2001,
+      // model: 'Mazda',
+      // year: 2001,
     };
   },
+  inject: ['model', 'year'],
 };
 </script>
 
