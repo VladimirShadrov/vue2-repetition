@@ -43,8 +43,12 @@ export default {
           link: '/dinamiccomponents',
         },
         {
-          name: 'Keep alive',
+          name: 'Keep-alive',
           link: '/keep-alive',
+        },
+        {
+          name: 'Асинхронные компоненты',
+          link: '/async-components',
         },
       ],
     };

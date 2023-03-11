@@ -25,6 +25,7 @@ import AppSlot from '../components/components/pages/AppSlot.vue';
 import AppProvide from '../components/components/pages/AppProvide.vue';
 import AppDinamicComponent from '../components/components/pages/AppDinamicComponent.vue';
 import AppKeepAlive from '../components/components/pages/AppKeepAlive.vue';
+import AppAsyncComponent from '../components/components/pages/AppAsyncComponent.vue';
 import AppDirectives from '../components/directives/AppDirectives.vue';
 import AppCustomDirect from '../components/directives/pages/AppCustomDirect.vue';
 import AppDirParams from '../components/directives/pages/AppDirParams.vue';
@@ -152,6 +153,10 @@ const routes = [
       {
         path: '/keep-alive',
         component: AppKeepAlive,
+      },
+      {
+        path: '/async-components',
+        component: AppAsyncComponent,
       },
     ],
   },
