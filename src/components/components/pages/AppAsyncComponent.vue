@@ -18,7 +18,6 @@
     <br />
 
     <!-- ЗДЕСЬ ВЫВЕСТИ АСИНХРОННЫЙ КОМПОНЕНТ -->
-    <app-async-test></app-async-test>
   </div>
 </template>
 
