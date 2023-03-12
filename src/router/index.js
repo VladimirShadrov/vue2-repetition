@@ -16,6 +16,7 @@ import AppInstance from '../components/base/pages/AppInstance.vue';
 import AppRef from '../components/base/pages/AppRef.vue';
 import AppTemplate from '../components/base/pages/AppTemplate.vue';
 import AppLifeCycle from '../components/base/pages/AppLifeCycle.vue';
+import AppAnimation from '../components/base/pages/AppAnimation.vue';
 import AppRegistration from '../components/components/pages/AppRegistration.vue';
 import AppProps from '../components/components/pages/AppProps.vue';
 import AppEmit from '../components/components/pages/AppEmit.vue';
@@ -57,60 +58,64 @@ const routes = [
     component: AppBase,
     children: [
       {
-        path: '/atributes',
+        path: 'atributes',
         component: AppDynamicAttributes,
       },
       {
-        path: '/v-html',
+        path: 'v-html',
         component: AppVHtml,
       },
       {
-        path: '/events',
+        path: 'events',
         component: AppEvents,
       },
       {
-        path: '/labels',
+        path: 'labels',
         component: AppDirectivesLabels,
       },
       {
-        path: '/v-model',
+        path: 'v-model',
         component: AppVModel,
       },
       {
-        path: '/styles',
+        path: 'styles',
         component: AppStyles,
       },
       {
-        path: '/v-if_v-show',
+        path: 'v-if_v-show',
         component: AppShowItems,
       },
       {
-        path: '/lists',
+        path: 'lists',
         component: AppLists,
       },
       {
-        path: '/computed',
+        path: 'computed',
         component: AppComputed,
       },
       {
-        path: '/watch',
+        path: 'watch',
         component: AppWatch,
       },
       {
-        path: '/vue-instance',
+        path: 'vue-instance',
         component: AppInstance,
       },
       {
-        path: '/ref',
+        path: 'ref',
         component: AppRef,
       },
       {
-        path: '/template',
+        path: 'template',
         component: AppTemplate,
       },
       {
-        path: '/life-cycle',
+        path: 'life-cycle',
         component: AppLifeCycle,
+      },
+      {
+        path: 'animation',
+        component: AppAnimation,
       },
     ],
   },

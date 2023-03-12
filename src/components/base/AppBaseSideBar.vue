@@ -12,59 +12,63 @@ export default {
       menuItems: [
         {
           name: 'Динамические атрибуты',
-          link: '/atributes',
+          link: '/base/atributes',
         },
         {
           name: 'Вывод HTML кода',
-          link: '/v-html',
+          link: '/base/v-html',
         },
         {
           name: 'Работа с событиями',
-          link: '/events',
+          link: '/base/events',
         },
         {
           name: 'Ярлыки для директив',
-          link: '/labels',
+          link: '/base/labels',
         },
         {
           name: 'Модель для работы с формами',
-          link: '/v-model',
+          link: '/base/v-model',
         },
         {
           name: 'Работа со стилями и классами',
-          link: '/styles',
+          link: '/base/styles',
         },
         {
           name: 'Управление отображением элементов',
-          link: '/v-if_v-show',
+          link: '/base/v-if_v-show',
         },
         {
           name: 'Работа со списками',
-          link: '/lists',
+          link: '/base/lists',
         },
         {
           name: 'Computed',
-          link: '/computed',
+          link: '/base/computed',
         },
         {
           name: 'Watch',
-          link: '/watch',
+          link: '/base/watch',
         },
         {
           name: 'Связывание разных приложений. Инстанс vue',
-          link: '/vue-instance',
+          link: '/base/vue-instance',
         },
         {
           name: 'Доступ к DOM элементам',
-          link: '/ref',
+          link: '/base/ref',
         },
         {
           name: 'Свойство template',
-          link: '/template',
+          link: '/base/template',
         },
         {
           name: 'Жизненный цикл',
-          link: '/life-cycle',
+          link: '/base/life-cycle',
+        },
+        {
+          name: 'Анимации',
+          link: '/base/animation',
         },
       ],
     };
