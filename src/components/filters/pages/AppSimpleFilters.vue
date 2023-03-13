@@ -16,9 +16,9 @@
     </h3>
     <br /><br />
 
-    <h2>{{ upperCaseTitle | toUpperCase }}</h2>
+    <h2>{{ upperCaseTitle }}</h2>
     <br /><br />
-    <h2>{{ reverseTitle | reverse }}</h2>
+    <h2>{{ reverseTitle }}</h2>
   </div>
 </template>
 
@@ -30,11 +30,6 @@ export default {
       upperCaseTitle: 'Привести этот текст к верхнему регистру',
       reverseTitle: 'Перевернуть данный текст задом наперед',
     };
-  },
-  filters: {
-    toUpperCase(value) {
-      return value.toUpperCase();
-    },
   },
 };
 </script>
