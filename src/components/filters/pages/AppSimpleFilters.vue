@@ -3,6 +3,9 @@
     <h1 class="content__theme-title">Создание простых фильтров</h1>
     <br />
 
+    <h3>Компонент: AppSimpleFilters.vue</h3>
+    <br />
+
     <h3>
       Задача: <br />
       - Создать 2 заголовка <br />
@@ -13,9 +16,9 @@
     </h3>
     <br /><br />
 
-    <h2>{{ upperCaseTitle }}</h2>
+    <h2>{{ upperCaseTitle | toUpperCase }}</h2>
     <br /><br />
-    <h2>{{ reverseTitle }}</h2>
+    <h2>{{ reverseTitle | reverse }}</h2>
   </div>
 </template>
 
@@ -27,6 +30,11 @@ export default {
       upperCaseTitle: 'Привести этот текст к верхнему регистру',
       reverseTitle: 'Перевернуть данный текст задом наперед',
     };
+  },
+  filters: {
+    toUpperCase(value) {
+      return value.toUpperCase();
+    },
   },
 };
 </script>
