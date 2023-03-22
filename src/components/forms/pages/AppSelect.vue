@@ -18,8 +18,8 @@
 
     <!-- РЕАЛИЗАЦИЯ -->
 
-    <select v-model="pizza">
-      <option v-for="item in options" :key="item">{{ item }}</option>
+    <select>
+      <option></option>
     </select>
     <br /><br />
     <hr />
@@ -28,7 +28,7 @@
     <h4>Вы выбрали:</h4>
     <br />
 
-    <h4>{{ pizza }}</h4>
+    <h4></h4>
   </div>
 </template>
 
@@ -38,7 +38,6 @@ export default {
   data() {
     return {
       options: ['Сырная', 'Мясная', 'Пеперони', 'Сырный цыпленок', 'Карбонара'],
-      pizza: 'Карбонара',
     };
   },
 };
