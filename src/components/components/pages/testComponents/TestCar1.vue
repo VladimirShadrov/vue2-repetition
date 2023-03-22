@@ -1,8 +1,8 @@
 <template>
   <div class="car">
     <h3 style="margin-bottom: 16px">Я дочерний компонент 1</h3>
-    <h2 class="car-title">Марка: {{ model }}</h2>
-    <h4>Год выпуска: {{ year }}</h4>
+    <h2 class="car-title">Марка: {{}}</h2>
+    <h4>Год выпуска: {{}}</h4>
     <br />
 
     <button class="button">Изменить</button>
@@ -11,12 +11,13 @@
 </template>
 
 <script>
+import { eventBus } from '@/main';
+
 export default {
   name: 'test-car-1',
-  props: ['model', 'year'],
   methods: {
     changeCounter() {
-      this.$emit('count-change', 1);
+      eventBus.$emit('counter-change', 1);
     },
   },
 };

@@ -11,13 +11,17 @@
 </template>
 
 <script>
+import { eventBus } from '@/main';
+
 export default {
   name: 'my-global-counter',
-  props: ['counter'],
   data() {
     return {
-      // counter: 0,
+      counter: 0,
     };
+  },
+  created() {
+    eventBus.$on('counter-change', (e) => (this.counter += e));
   },
 };
 </script>
