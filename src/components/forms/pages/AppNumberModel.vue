@@ -17,14 +17,14 @@
 
     <!-- РЕАЛИЗАЦИЯ -->
 
-    <input type="number" v-model.lazy="num" /><br /><br />
+    <input type="number" /><br /><br />
     <hr />
     <br />
 
     <h4>Вы ввели число:</h4>
     <br />
 
-    <h4>{{ num | val }}</h4>
+    <h4></h4>
   </div>
 </template>
 
@@ -32,15 +32,7 @@
 export default {
   name: 'app-number-model',
   data() {
-    return {
-      num: 0,
-    };
-  },
-  filters: {
-    val(v) {
-      console.log(+v.toLocaleString());
-      return +v.toLocaleString();
-    },
+    return {};
   },
 };
 </script>
