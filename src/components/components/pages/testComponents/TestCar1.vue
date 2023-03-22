@@ -5,18 +5,19 @@
     <h4>Год выпуска: {{ year }}</h4>
     <br />
 
-    <button @click="cb" class="button">Изменить</button>
-    <button class="button">Увеличить счетчик</button>
+    <button class="button">Изменить</button>
+    <button @click="changeCounter" class="button">Увеличить счетчик</button>
   </div>
 </template>
 
 <script>
 export default {
   name: 'test-car-1',
-  props: {
-    model: { type: String, default: 'Жигули' },
-    year: { type: Number, default: 1985 },
-    cb: { type: Function },
+  props: ['model', 'year'],
+  methods: {
+    changeCounter() {
+      this.$emit('count-change', 1);
+    },
   },
 };
 </script>

@@ -20,16 +20,12 @@
     <br />
 
     <!-- СЮДА ВСТАВИТЬ КОМПОНЕНТ -->
-    <test-car-2 @title-change="title = $event" :model="title" :year="year"></test-car-2>
   </div>
 </template>
 
 <script>
-import TestCar2 from './testComponents/TestCar2.vue';
-
 export default {
   name: 'app-emit',
-  components: { TestCar2 },
   data() {
     return {
       title: 'Mazda',

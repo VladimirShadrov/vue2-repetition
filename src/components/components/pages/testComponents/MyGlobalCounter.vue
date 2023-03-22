@@ -13,9 +13,10 @@
 <script>
 export default {
   name: 'my-global-counter',
+  props: ['counter'],
   data() {
     return {
-      counter: 0,
+      // counter: 0,
     };
   },
 };
