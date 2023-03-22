@@ -8,11 +8,6 @@ Vue.directive('my-directive', myDirective);
 
 Vue.config.productionTip = false;
 
-import MyGlobalCounter from './components/components/pages/testComponents/MyGlobalCounter.vue';
-console.log(MyGlobalCounter);
-
-Vue.component('global-counter', MyGlobalCounter);
-
 new Vue({
   router,
   render: (h) => h(App),

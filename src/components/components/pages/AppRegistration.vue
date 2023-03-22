@@ -21,7 +21,6 @@
     <br />
 
     <!-- Сюда добавить глобальный компонент -->
-    <global-counter></global-counter>
 
     <br /><br />
     <hr />
