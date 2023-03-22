@@ -7,18 +7,15 @@
     <hr />
     <br />
 
-    <p class="list-item" v-for="name of filtredNames" :key="name">
+    <p class="list-item" v-for="name of names" :key="name">
       <b>{{ name }}</b>
     </p>
   </div>
 </template>
 
 <script>
-import { filterMixin } from '@/myMixin';
-
 export default {
   name: 'test-mixin-1',
-  mixins: [filterMixin],
 };
 </script>
 
