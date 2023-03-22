@@ -5,18 +5,25 @@
     <h4>Год выпуска: {{ year }}</h4>
     <br />
 
-    <button class="button">Изменить</button>
+    <button @click="changeTitle" class="button">Изменить</button>
   </div>
 </template>
 
 <script>
 export default {
   name: 'test-car-2',
+  props: ['model'],
   data() {
     return {
-      model: 'Mazda',
+      // model: 'Mazda',
       year: 2001,
     };
+  },
+  methods: {
+    changeTitle() {
+      this.$emit('title-change', 'Камаз');
+      this.year = 1955;
+    },
   },
 };
 </script>
