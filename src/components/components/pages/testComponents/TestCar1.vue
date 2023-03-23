@@ -6,20 +6,13 @@
     <br />
 
     <button class="button">Изменить</button>
-    <button @click="changeCounter" class="button">Увеличить счетчик</button>
+    <button class="button">Увеличить счетчик</button>
   </div>
 </template>
 
 <script>
-import { eventBus } from '@/main';
-
 export default {
   name: 'test-car-1',
-  methods: {
-    changeCounter() {
-      eventBus.$emit('counter-change', 1);
-    },
-  },
 };
 </script>
 
