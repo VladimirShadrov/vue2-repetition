@@ -14,10 +14,11 @@ export default {
   name: 'test-car-2',
   data() {
     return {
-      model: 'Mazda',
-      year: 2001,
+      // model: 'Mazda',
+      // year: 2001,
     };
   },
+  inject: ['model', 'year'],
 };
 </script>
 
