@@ -8,8 +8,6 @@ Vue.directive('my-directive', myDirective);
 
 Vue.config.productionTip = false;
 
-Vue.component('app-async-test', () => import('./components/components/pages/testComponents/AppAsyncTest.vue'));
-
 new Vue({
   router,
   render: (h) => h(App),
