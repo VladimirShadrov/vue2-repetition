@@ -7,7 +7,7 @@
 
     <h4>Задача: Вставить HTML строку "template" из данных в заголовок</h4>
     <br />
-    <h1></h1>
+    <h1 v-html="template"></h1>
   </div>
 </template>
 
