@@ -14,9 +14,10 @@
     </h4>
     <br />
 
-    <input @input="inputValue = $event.target.value" :value="inputValue" type="text" /><br /><br />
+    <input type="text" /><br /><br />
 
-    <h2>{{ inputValue }}</h2>
+    <!-- СЮДА ВЫВЕСТИ ТЕКСТ -->
+    <h2></h2>
   </div>
 </template>
 
