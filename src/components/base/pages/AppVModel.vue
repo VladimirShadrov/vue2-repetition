@@ -2,6 +2,8 @@
   <div>
     <h1 class="content__theme-title">Модель для работы с формами</h1>
     <br />
+    <h3>Компонент: AppVModel.vue</h3>
+    <br />
 
     <h4>
       Задача: <br /><br />
@@ -12,7 +14,7 @@
     </h4>
     <br />
 
-    <input type="text" /><br /><br />
+    <input @input="inputValue = $event.target.value" :value="inputValue" type="text" /><br /><br />
 
     <h2>{{ inputValue }}</h2>
   </div>
@@ -23,7 +25,7 @@ export default {
   name: 'app-v-model',
   data() {
     return {
-      inputValue: '',
+      inputValue: 'Some value: ',
     };
   },
 };
