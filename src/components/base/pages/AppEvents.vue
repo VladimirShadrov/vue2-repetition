@@ -57,7 +57,7 @@
       - При нажатии на клашу enter вывести введенный текст в параграф
     </h4>
     <br />
-    <input type="text" /><br /><br />
+    <input @keyup.enter="inputText = $event.target.value" type="text" /><br /><br />
     <p>
       Вы ввели текст: <b>{{ inputText }}</b>
     </p>
