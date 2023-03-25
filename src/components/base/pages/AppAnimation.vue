@@ -55,7 +55,9 @@
     <br />
 
     <h4 v-if="!newsArr.length">Новостей пока нет...</h4>
-    <h4></h4>
+    <transition-group name="animate">
+      <h4 v-for="(item, index) in newsArr" :key="item.id">{{ index + 1 }}. {{ item.text }}</h4>
+    </transition-group>
 
     <!-- КОНЕЦ РЕШЕНИЯ -->
     <div style="margin-bottom: 300px"></div>
@@ -91,4 +93,14 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.animate-enter-active,
+.animate-leave-active {
+  transition: all 1s;
+}
+.animate-enter,
+.animate-leave-to {
+  opacity: 0;
+  transform: translateX(100px);
+}
+</style>
