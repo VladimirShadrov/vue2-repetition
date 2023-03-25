@@ -29,7 +29,7 @@
       <div class="circle">1</div>
       <div class="circle">2</div>
       <br /><br />
-      <input type="text" class="input" />
+      <input type="text" class="input" placeholder="class name" />
     </div>
     <br /><br />
 
@@ -45,11 +45,11 @@
     <br /><br />
 
     <div class="wrapper">
-      <div :style="className" class="circle">1</div>
-      <div :style="[className, { width: `${height}px` }]" class="circle">2</div>
+      <div class="circle">1</div>
+      <div class="circle">2</div>
       <br /><br />
-      <input v-model="color" type="text" class="input" placeholder="style value" />
-      <input v-model="height" type="text" class="input" placeholder="height" />
+      <input type="text" class="input" placeholder="style value" />
+      <input type="text" class="input" placeholder="height" />
     </div>
   </div>
 </template>
@@ -63,14 +63,6 @@ export default {
       color: '',
       height: '',
     };
-  },
-  computed: {
-    className() {
-      return {
-        background: this.color,
-        height: `${this.height}px`,
-      };
-    },
   },
 };
 </script>
