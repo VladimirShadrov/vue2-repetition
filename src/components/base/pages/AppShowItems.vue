@@ -42,25 +42,20 @@
     </h4>
     <br />
 
-    <template v-if="isVisible">
-      <h1>Заголовок</h1>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, debitis fugiat? Eaque expedita iusto blanditiis voluptatibus facilis sequi et
-        suscipit.
-      </p>
-    </template>
-
-    <template v-else>
-      <h1 style="color: red">Заголовок</h1>
-      <p style="color: blue">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, debitis fugiat? Eaque expedita iusto blanditiis voluptatibus facilis sequi et
-        suscipit.
-      </p>
-    </template>
+    <h1>Заголовок</h1>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, debitis fugiat? Eaque expedita iusto blanditiis voluptatibus facilis sequi et
+      suscipit.
+    </p>
+    <h1 style="color: red">Заголовок</h1>
+    <p style="color: blue">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, debitis fugiat? Eaque expedita iusto blanditiis voluptatibus facilis sequi et
+      suscipit.
+    </p>
 
     <br /><br />
 
-    <button @click="isVisible = !isVisible" class="button">Показать другой текст</button>
+    <button class="button">Показать другой текст</button>
   </div>
 </template>
 

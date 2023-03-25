@@ -13,7 +13,7 @@
     </h4>
     <br />
 
-    <h3></h3>
+    <h3 v-for="(person, index) in people" :key="person">{{ index + 1 }}. Имя: {{ person.name }}, Профессия: {{ person.job }}</h3>
     <br /><br />
 
     <h4>
@@ -22,7 +22,7 @@
     </h4>
     <br />
 
-    <h3></h3>
+    <h3 v-for="(item, keyName, index) in person" :key="item">{{ index + 1 }}. {{ keyName }}: {{ item }}</h3>
   </div>
 </template>
 
@@ -42,7 +42,7 @@ export default {
         },
         {
           name: 'Юля',
-          job: 'Логопед',
+          job: 'Логопед-студент',
         },
         {
           name: 'Оля',
