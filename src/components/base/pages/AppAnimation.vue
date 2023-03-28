@@ -40,10 +40,9 @@
 
     <h3>
       Задача: <br />
-      - <br />
-      - <br />
-      - <br />
-      - <br />
+      - Ввести слово или фразу в input <br />
+      - По нажатию на enter добавить введенную фразу в список<br />
+      - Вывести под чертой с анимацией введенный текст <br />
     </h3>
     <br />
     <hr />
@@ -55,7 +54,10 @@
     <br />
 
     <h4 v-if="!newsArr.length">Новостей пока нет...</h4>
-    <h4></h4>
+    <!-- СЮДА ДОБАВИТЬ СПИСОК -->
+    <transition-group name="list">
+      <h4 v-for="(item, index) in newsArrData" :key="item">{{ index + 1 }}. {{ item.text }}</h4>
+    </transition-group>
 
     <!-- КОНЕЦ РЕШЕНИЯ -->
     <div style="margin-bottom: 300px"></div>
@@ -78,9 +80,13 @@ export default {
         id: this.id,
         text: this.news,
       };
-      this.newsArr.push(news);
-      this.id++;
-      this.news = '';
+      if (this.news.length) {
+        this.newsArr.push(news);
+        this.id++;
+        this.news = '';
+      } else {
+        return;
+      }
     },
   },
   computed: {
@@ -91,4 +97,13 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.list-enter-active,
+.list-leave-active {
+  transition: all 3s;
+}
+.list-enter, .list-leave-to /* .list-leave-active до версии 2.1.8 */ {
+  opacity: 0;
+  transform: translate(30px, 200px);
+}
+</style>
