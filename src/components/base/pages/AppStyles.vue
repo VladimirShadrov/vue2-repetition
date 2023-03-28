@@ -45,11 +45,11 @@
     <br /><br />
 
     <div class="wrapper">
-      <div :style="{ background: color, height: `${height}px` }" class="circle">1</div>
-      <div :style="[styles]" class="circle">2</div>
+      <div class="circle">1</div>
+      <div class="circle">2</div>
       <br /><br />
-      <input v-model="color" type="text" class="input" placeholder="style value" />
-      <input v-model="height" type="text" class="input" placeholder="height" />
+      <input type="text" class="input" placeholder="style value" />
+      <input type="text" class="input" placeholder="height" />
     </div>
   </div>
 </template>
@@ -63,18 +63,6 @@ export default {
       color: '',
       height: '',
     };
-  },
-  computed: {
-    className() {
-      return { purple: this.isActive, blue: !this.isActive };
-    },
-    styles() {
-      return {
-        background: this.color,
-        height: `${this.height}px`,
-        width: `${this.height}px`,
-      };
-    },
   },
 };
 </script>
