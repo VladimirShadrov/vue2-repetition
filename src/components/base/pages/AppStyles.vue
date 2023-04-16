@@ -26,10 +26,10 @@
     </h4>
     <br /><br />
     <div class="wrapper">
-      <div @click="isActive = !isActive" :class="getClasses" class="circle">1</div>
-      <div :class="[activeClass, getClasses]" class="circle">2</div>
+      <div class="circle">1</div>
+      <div class="circle">2</div>
       <br /><br />
-      <input v-model="activeClass" type="text" class="input" placeholder="class name" />
+      <input type="text" class="input" placeholder="class name" />
     </div>
     <br /><br />
 
@@ -45,11 +45,11 @@
     <br /><br />
 
     <div class="wrapper">
-      <div :style="[getStyles]" class="circle">1</div>
-      <div :style="[getStyles, { width: `${height}px` }]" class="circle">2</div>
+      <div class="circle">1</div>
+      <div class="circle">2</div>
       <br /><br />
-      <input v-model="color" type="text" class="input" placeholder="style value" />
-      <input v-model="height" type="text" class="input" placeholder="height" />
+      <input type="text" class="input" placeholder="style value" />
+      <input type="text" class="input" placeholder="height" />
     </div>
   </div>
 </template>
@@ -63,20 +63,6 @@ export default {
       color: '',
       height: '',
     };
-  },
-  computed: {
-    getClasses() {
-      return {
-        purple: this.isActive,
-        blue: !this.isActive,
-      };
-    },
-    getStyles() {
-      return {
-        background: this.color,
-        height: `${this.height}px`,
-      };
-    },
   },
 };
 </script>

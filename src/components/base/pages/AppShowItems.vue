@@ -15,8 +15,9 @@
     </h4>
     <br />
 
-    <h1>Заголовок 1</h1>
-    <h1>Заголовок 2</h1>
+    <!-- РЕШЕНИЕ ЗАДАЧИ 1 -->
+    <h1 v-if="isVisible">Заголовок 1</h1>
+    <h1 v-else>Заголовок 2</h1>
     <br />
 
     <button @click="isVisible = !isVisible" class="button">Показать другой заголовок</button><br /><br /><br />
@@ -28,30 +29,35 @@
     </h4>
     <br />
 
-    <h1>Заголовок 1</h1>
-    <h1>Заголовок 2</h1>
-    <h1>Заголовок 3</h1>
-    <h1>Совпадений не найдено</h1>
+    <!-- РЕШЕНИЕ ЗАДАЧИ 2 -->
+    <h1 v-if="type === '1'">Заголовок 1</h1>
+    <h1 v-else-if="type === '2'">Заголовок 2</h1>
+    <h1 v-else-if="type === '3'">Заголовок 3</h1>
+    <h1 v-else>Совпадений не найдено</h1>
     <br />
 
-    <input class="input" type="text" placeholder="Номер заголовка" /><br /><br /><br />
+    <input v-model.lazy="type" class="input" type="text" placeholder="Номер заголовка" /><br /><br /><br />
 
     <h4>
       Задача 3: <br />
       - По клику по кнопке реализовать попеременное отображение заголовка и параграфа с текстом <br />
     </h4>
     <br />
-
-    <h1>Заголовок</h1>
-    <p>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, debitis fugiat? Eaque expedita iusto blanditiis voluptatibus facilis sequi et
-      suscipit.
-    </p>
-    <h1 style="color: red">Заголовок</h1>
-    <p style="color: blue">
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, debitis fugiat? Eaque expedita iusto blanditiis voluptatibus facilis sequi et
-      suscipit.
-    </p>
+    <!-- РЕШЕНИЕ ЗАДАЧИ 3 -->
+    <template v-if="isVisible">
+      <h1>Заголовок</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, debitis fugiat? Eaque expedita iusto blanditiis voluptatibus facilis sequi et
+        suscipit.
+      </p>
+    </template>
+    <template v-else>
+      <h1 style="color: red">Заголовок</h1>
+      <p style="color: blue">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, debitis fugiat? Eaque expedita iusto blanditiis voluptatibus facilis sequi et
+        suscipit.
+      </p>
+    </template>
 
     <br /><br />
 
