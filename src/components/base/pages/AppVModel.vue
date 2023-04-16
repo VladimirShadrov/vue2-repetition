@@ -14,10 +14,10 @@
     </h4>
     <br />
 
-    <input type="text" /><br /><br />
+    <input v-model.trim="inputValue" type="text" /><br /><br />
 
     <!-- СЮДА ВЫВЕСТИ ТЕКСТ -->
-    <h2></h2>
+    <h2>{{ getText }}</h2>
   </div>
 </template>
 
@@ -28,6 +28,11 @@ export default {
     return {
       inputValue: 'Some value: ',
     };
+  },
+  computed: {
+    getText() {
+      return this.inputValue;
+    },
   },
 };
 </script>
