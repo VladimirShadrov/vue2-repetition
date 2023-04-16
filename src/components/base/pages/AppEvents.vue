@@ -12,11 +12,12 @@
     </h4>
     <br />
 
-    <h2>Counter: {{ counter }}</h2>
+    <!-- РЕШЕНИЕ. ЗАДАЧА 1 -->
+    <h2 @mouseenter="changeColor">Counter: {{ counter }}</h2>
     <br />
 
-    <button class="button">Увеличить</button>
-    <button class="button">Уменьшить</button><br /><br />
+    <button @click="counter++" class="button">Увеличить</button>
+    <button @click="counter--" class="button">Уменьшить</button><br /><br />
     <hr />
     <br />
 
@@ -30,11 +31,12 @@
     </h4>
     <br />
 
+    <!-- РЕШЕНИЕ. ЗАДАЧА 2 -->
     <h2>Counter2 {{ title }}: {{ counter2 }}</h2>
     <br />
 
-    <button class="button">Увеличить на 5</button>
-    <button class="button">Увеличить на 10</button><br /><br />
+    <button @click="count(5, $event, 'red')" class="button">Увеличить на 5</button>
+    <button @click="count(10, $event, 'purple')" class="button">Увеличить на 10</button><br /><br />
     <hr />
     <br />
 
@@ -44,8 +46,9 @@
     <h4>Задача: Отменить у ссылки стандартное поведение (запретить переход по ссылке)</h4>
     <br />
 
+    <!-- РЕШЕНИЕ. ЗАДАЧА 3 -->
     <h3>
-      <a href="http://yandex.ru" target="blank">Yandex</a>
+      <a @click.prevent="" href="http://yandex.ru" target="blank">Yandex</a>
     </h3>
     <br />
     <hr />
@@ -57,7 +60,9 @@
       - При нажатии на клашу enter вывести введенный текст в параграф
     </h4>
     <br />
-    <input type="text" /><br /><br />
+
+    <!-- РЕШЕНИЕ. ЗАДАЧА 4 -->
+    <input @keyup.enter="saveInputText" type="text" /><br /><br />
     <p>
       Вы ввели текст: <b>{{ inputText }}</b>
     </p>
@@ -76,7 +81,18 @@ export default {
     };
   },
   methods: {
-    saveInputText() {},
+    saveInputText(e) {
+      this.inputText = e.target.value;
+    },
+
+    changeColor(e) {
+      e.target.style.color = 'blue';
+    },
+    count(n, e, color) {
+      this.counter2 += n;
+      this.title = `Увеличено на ${n}`;
+      e.target.style.color = color;
+    },
   },
 };
 </script>
