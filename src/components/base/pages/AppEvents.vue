@@ -62,7 +62,7 @@
     <br />
 
     <!-- РЕШЕНИЕ. ЗАДАЧА 4 -->
-    <input @keyup.enter="saveInputText" type="text" /><br /><br />
+    <input type="text" /><br /><br />
     <p>
       Вы ввели текст: <b>{{ inputText }}</b>
     </p>
@@ -81,9 +81,7 @@ export default {
     };
   },
   methods: {
-    saveInputText(e) {
-      this.inputText = e.target.value;
-    },
+    saveInputText() {},
   },
 };
 </script>
