@@ -26,10 +26,10 @@
     </h4>
     <br /><br />
     <div class="wrapper">
-      <div class="circle">1</div>
-      <div class="circle">2</div>
+      <div @click="isActive = !isActive" :class="class1" class="circle">1</div>
+      <div :class="class2" class="circle">2</div>
       <br /><br />
-      <input type="text" class="input" placeholder="class name" />
+      <input v-model="activeClass" type="text" class="input" placeholder="class name" />
     </div>
     <br /><br />
 
@@ -63,6 +63,14 @@ export default {
       color: '',
       height: '',
     };
+  },
+  computed: {
+    class1() {
+      return { purple: this.isActive, blue: !this.isActive };
+    },
+    class2() {
+      return [this.activeClass, { purple: this.isActive, blue: !this.isActive }];
+    },
   },
 };
 </script>
