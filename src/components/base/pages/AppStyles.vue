@@ -26,10 +26,10 @@
     </h4>
     <br /><br />
     <div class="wrapper">
-      <div @click="isActive = !isActive" :class="class1" class="circle">1</div>
-      <div :class="class2" class="circle">2</div>
+      <div class="circle">1</div>
+      <div class="circle">2</div>
       <br /><br />
-      <input v-model="activeClass" type="text" class="input" placeholder="class name" />
+      <input type="text" class="input" placeholder="class name" />
     </div>
     <br /><br />
 
@@ -45,11 +45,11 @@
     <br /><br />
 
     <div class="wrapper">
-      <div class="circle">1</div>
-      <div class="circle">2</div>
+      <div :style="style1" class="circle">1</div>
+      <div :style="style2" class="circle">2</div>
       <br /><br />
-      <input type="text" class="input" placeholder="style value" />
-      <input type="text" class="input" placeholder="height" />
+      <input v-model="color" type="text" class="input" placeholder="style value" />
+      <input v-model="height" type="text" class="input" placeholder="height" />
     </div>
   </div>
 </template>
@@ -65,11 +65,11 @@ export default {
     };
   },
   computed: {
-    class1() {
-      return { purple: this.isActive, blue: !this.isActive };
+    style1() {
+      return { background: this.color, height: `${this.height}px` };
     },
-    class2() {
-      return [this.activeClass, { purple: this.isActive, blue: !this.isActive }];
+    style2() {
+      return { background: this.color, height: `${this.height}px`, width: `${this.height}px` };
     },
   },
 };
