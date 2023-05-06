@@ -35,9 +35,9 @@
     <h4>Здесь вывести текст: {{ textValue }}</h4>
     <br />
 
-    <button @click="counter1++" class="button">Увеличить счетчик 1</button>
-    <button @click="counter1--" class="button">Уменьшить счетчик 1</button>
-    <button @click="counter2++" class="button">Увеличить счетчик 2</button><br /><br />
+    <button class="button">Увеличить счетчик 1</button>
+    <button class="button">Уменьшить счетчик 1</button>
+    <button class="button">Увеличить счетчик 2</button><br /><br />
   </div>
 </template>
 
@@ -49,12 +49,6 @@ export default {
       counter1: 0,
       counter2: 0,
     };
-  },
-  computed: {
-    textValue() {
-      console.log('Метод вызван');
-      return this.counter1 > 3 ? 'Значение больше 3' : 'Значение меньше 3';
-    },
   },
 };
 </script>
