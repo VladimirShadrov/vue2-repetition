@@ -23,16 +23,26 @@
     <br /><br />
 
     <!-- СЮДА ВСТАВИТЬ TestCar2 -->
+    <test-car-2 />
   </div>
 </template>
 
 <script>
+import TestCar2 from './testComponents/TestCar2.vue';
+
 export default {
+  components: { TestCar2 },
   name: 'app-provide',
   data() {
     return {
       model: 'KIA',
       year: 2015,
+    };
+  },
+  provide() {
+    return {
+      name: this.model,
+      dates: this.year,
     };
   },
 };

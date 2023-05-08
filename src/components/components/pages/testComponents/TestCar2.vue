@@ -1,8 +1,8 @@
 <template>
   <div class="car">
     <h3 style="margin-bottom: 16px">Я дочерний компонент 2</h3>
-    <h2 class="car-title">Марка: {{}}</h2>
-    <h4>Год выпуска: {{}}</h4>
+    <h2 class="car-title">Марка: {{ name }}</h2>
+    <h4>Год выпуска: {{ dates }}</h4>
     <br />
 
     <button class="button">Изменить</button>
@@ -18,6 +18,7 @@ export default {
       year: 2001,
     };
   },
+  inject: ['name', 'dates'],
 };
 </script>
 
