@@ -13,11 +13,12 @@
 <script>
 export default {
   name: 'my-global-counter',
-  data() {
-    return {
-      counter: 0,
-    };
-  },
+  props: { counter: { type: Number } },
+  // data() {
+  //   return {
+  //     counter: 0,
+  //   };
+  // },
 };
 </script>
 

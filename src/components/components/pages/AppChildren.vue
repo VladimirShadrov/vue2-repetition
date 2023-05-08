@@ -19,8 +19,8 @@
     <br />
 
     <div class="wrapper">
-      <test-car-1></test-car-1>
-      <my-global-counter></my-global-counter>
+      <test-car-1 @changeCounter="counter += $event" :model="model" :year="year"></test-car-1>
+      <my-global-counter :counter="counter"></my-global-counter>
     </div>
   </div>
 </template>
