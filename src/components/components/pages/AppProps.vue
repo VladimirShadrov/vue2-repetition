@@ -48,8 +48,13 @@ export default {
   },
   methods: {
     changeName() {
-      this.title = 'Запорожец';
+      this.title = 'Audi';
     },
+  },
+  mounted() {
+    setTimeout(() => {
+      console.log(this.$refs);
+    }, 1000);
   },
 };
 </script>
