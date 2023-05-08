@@ -30,7 +30,7 @@
     <br />
 
     <!-- ЗДЕСЬ ВСТАВИТЬ ТЕСТОВЫЙ КОМПОНЕНТ -->
-    <test-car-1 :model="title" :year="year" :cb="changeName"></test-car-1>
+    <test-car-1></test-car-1>
   </div>
 </template>
 
@@ -50,11 +50,6 @@ export default {
     changeName() {
       this.title = 'Audi';
     },
-  },
-  mounted() {
-    setTimeout(() => {
-      console.log(this.$refs);
-    }, 1000);
   },
 };
 </script>
