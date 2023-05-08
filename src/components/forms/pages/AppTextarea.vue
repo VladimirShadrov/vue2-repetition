@@ -16,9 +16,9 @@
 
     <!-- РЕАЛИЗАЦИЯ -->
 
-    <textarea></textarea><br /><br />
+    <textarea v-model="text"></textarea><br /><br />
 
-    <p></p>
+    <p>{{ text }}</p>
   </div>
 </template>
 
@@ -26,7 +26,9 @@
 export default {
   name: 'app-textarea',
   data() {
-    return {};
+    return {
+      text: '',
+    };
   },
 };
 </script>
@@ -37,5 +39,8 @@ textarea {
   width: 400px;
   font-size: 16px;
   padding: 6px;
+}
+p {
+  white-space: pre;
 }
 </style>
