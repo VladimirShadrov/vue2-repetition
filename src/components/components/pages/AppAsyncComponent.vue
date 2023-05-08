@@ -19,11 +19,17 @@
     <br />
 
     <!-- ЗДЕСЬ ВЫВЕСТИ АСИНХРОННЫЙ КОМПОНЕНТ -->
+    <app-async-test />
   </div>
 </template>
 
 <script>
+// import AppAsyncTest from './testComponents/AppAsyncTest.vue';
+
 export default {
+  // components: {
+  //   AppAsyncTest: () => import('./testComponents/AppAsyncTest.vue'),
+  // },
   name: 'app-async-component',
 };
 </script>

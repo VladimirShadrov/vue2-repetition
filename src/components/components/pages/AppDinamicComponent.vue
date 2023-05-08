@@ -16,32 +16,20 @@
     </h3>
     <br /><br />
 
-    <button @click="activeComponent = 1" class="button">Компонент 1</button>
-    <button @click="activeComponent = 2" class="button">Компонент 2</button><br /><br /><br />
+    <button class="button">Компонент 1</button>
+    <button class="button">Компонент 2</button><br /><br /><br />
 
     <!-- ЗДЕСЬ ОТРИСОВАТЬ ДИНАМИЧЕСКИЕ КОМПОНЕНТЫ -->
-    <keep-alive>
-      <component :is="activeComponentName"></component>
-    </keep-alive>
   </div>
 </template>
 
 <script>
-import AppDynamic1 from './testComponents/AppDynamic1.vue';
-import AppDynamic2 from './testComponents/AppDynamic2.vue';
-
 export default {
-  components: { AppDynamic1, AppDynamic2 },
   name: 'app-dinamic-component',
   data() {
     return {
-      activeComponent: 2,
+      activeComponent: 1,
     };
-  },
-  computed: {
-    activeComponentName() {
-      return `app-dynamic-${this.activeComponent}`;
-    },
   },
 };
 </script>
