@@ -19,18 +19,18 @@
     <h2>Какую пиццу будем заказывать?</h2>
     <br /><br />
 
-    <label> <input type="checkbox" /> Сырная </label>
-    <label> <input type="checkbox" /> Мясная </label>
-    <label> <input type="checkbox" /> Пеперони </label>
-    <label> <input type="checkbox" /> Сырный цыпленок </label>
-    <label> <input type="checkbox" /> Карбонара </label><br /><br /><br />
+    <label> <input v-model="text" value="Сырная" type="checkbox" /> Сырная </label>
+    <label> <input v-model="text" value="Мясная" type="checkbox" /> Мясная </label>
+    <label> <input v-model="text" value="Пеперони" type="checkbox" /> Пеперони </label>
+    <label> <input v-model="text" value="Сырный цыпленок" type="checkbox" /> Сырный цыпленок </label>
+    <label> <input v-model="text" value="Карбонара" type="checkbox" /> Карбонара </label><br /><br /><br />
     <hr />
     <br />
 
     <h4>Вы выбрали:</h4>
     <br />
 
-    <h4></h4>
+    <h4 v-for="item in selected" :key="item">{{ item }}</h4>
   </div>
 </template>
 
@@ -38,7 +38,14 @@
 export default {
   name: 'app-checkbox',
   data() {
-    return {};
+    return {
+      text: [],
+    };
+  },
+  computed: {
+    selected() {
+      return this.text;
+    },
   },
 };
 </script>
