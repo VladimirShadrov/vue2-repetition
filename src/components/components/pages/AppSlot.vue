@@ -21,11 +21,29 @@
     <br /><br /><br />
 
     <!-- СЮДА ВСТАВИТЬ MYSLOT -->
+    <my-slot>
+      <template slot="header">
+        <div>это хедер</div>
+      </template>
+      <template slot="content">
+        <div>
+          <p>Это контент</p>
+        </div>
+      </template>
+      <template slot="footer">
+        <div>
+          <p>Это footer</p>
+        </div>
+      </template>
+    </my-slot>
   </div>
 </template>
 
 <script>
+import MySlot from './testComponents/MySlot.vue';
+
 export default {
+  components: { MySlot },
   name: 'app-scoped',
 };
 </script>
