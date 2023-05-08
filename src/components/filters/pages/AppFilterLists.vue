@@ -18,9 +18,8 @@
     <hr />
     <br />
 
-    <p class="list-item" v-for="name in namesF" :key="name">
-      <!-- <b>Сюда вывести список</b> -->
-      <b>{{ name }}</b>
+    <p class="list-item">
+      <b>Сюда вывести список</b>
     </p>
   </div>
 </template>
@@ -34,11 +33,6 @@ export default {
       placeholder: 'Введите имя...',
       inputValue: '',
     };
-  },
-  computed: {
-    namesF() {
-      return this.names.filter((name) => name.toLowerCase().includes(this.inputValue.toLowerCase()));
-    },
   },
 };
 </script>
