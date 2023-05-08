@@ -6,8 +6,6 @@ import { myDirective } from './directive';
 
 Vue.directive('my-directive', myDirective);
 
-Vue.component('AppAsyncTest', () => import('./components/components/pages/testComponents/AppAsyncTest.vue'));
-
 Vue.config.productionTip = false;
 
 new Vue({
