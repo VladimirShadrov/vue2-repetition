@@ -9,7 +9,7 @@
     <br />
 
     <h2>
-      <a href="#" target="blank">Google</a>
+      <a v-bind:href="hrefValue" target="blank">Google</a>
     </h2>
   </div>
 </template>
