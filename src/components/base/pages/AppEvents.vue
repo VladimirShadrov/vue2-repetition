@@ -13,11 +13,11 @@
     <br />
 
     <!-- РЕШЕНИЕ. ЗАДАЧА 1 -->
-    <h2 @mouseenter="setColor($event)">Counter: {{ counter }}</h2>
+    <h2>Counter: {{ counter }}</h2>
     <br />
 
-    <button @click="counter++" class="button">Увеличить</button>
-    <button @click="counter--" class="button">Уменьшить</button><br /><br />
+    <button class="button">Увеличить</button>
+    <button class="button">Уменьшить</button><br /><br />
     <hr />
     <br />
 
@@ -82,10 +82,6 @@ export default {
   },
   methods: {
     saveInputText() {},
-
-    setColor(event) {
-      event.target.style.color = 'blue';
-    },
   },
 };
 </script>
