@@ -13,11 +13,11 @@
     <br />
 
     <!-- РЕШЕНИЕ. ЗАДАЧА 1 -->
-    <h2 @mouseenter="changeColor($event, 'enter')" @mouseleave="changeColor($event, 'leave')">Counter: {{ counter }}</h2>
+    <h2>Counter: {{ counter }}</h2>
     <br />
 
-    <button class="button" @click="counter++">Увеличить</button>
-    <button class="button" @click="counter--">Уменьшить</button><br /><br />
+    <button class="button">Увеличить</button>
+    <button class="button">Уменьшить</button><br /><br />
     <hr />
     <br />
 
@@ -35,8 +35,8 @@
     <h2>Counter2 {{ title }}: {{ counter2 }}</h2>
     <br />
 
-    <button class="button" @click="changeCounter2($event, 5)">Увеличить на 5</button>
-    <button class="button" @click="changeCounter2($event, 10)">Увеличить на 10</button><br /><br />
+    <button class="button">Увеличить на 5</button>
+    <button class="button">Увеличить на 10</button><br /><br />
     <hr />
     <br />
 
@@ -48,7 +48,7 @@
 
     <!-- РЕШЕНИЕ. ЗАДАЧА 3 -->
     <h3>
-      <a @click.prevent="" href="https://yandex.ru" target="blank">Yandex</a>
+      <a href="https://yandex.ru" target="blank">Yandex</a>
     </h3>
     <br />
     <hr />
@@ -62,7 +62,7 @@
     <br />
 
     <!-- РЕШЕНИЕ. ЗАДАЧА 4 -->
-    <input @keyup="saveInputText" type="text" /><br /><br />
+    <input type="text" /><br /><br />
     <p>
       Вы ввели текст: <b>{{ inputText }}</b>
     </p>
@@ -79,37 +79,6 @@ export default {
       inputText: '',
       title: '',
     };
-  },
-  methods: {
-    saveInputText(event) {
-      if (event.keyCode === 13) {
-        this.inputText = event.target.value;
-      }
-      console.log(event);
-    },
-    changeColor(event, prop) {
-      switch (prop) {
-        case 'enter':
-          event.target.style.color = 'red';
-          break;
-        case 'leave':
-          event.target.style.color = 'black';
-          break;
-      }
-    },
-    changeCounter2(event, num) {
-      this.counter2 += num;
-      this.title = `(Увеличен на ${num})`;
-
-      switch (num) {
-        case 5:
-          event.target.style.color = 'red';
-          break;
-        case 10:
-          event.target.style.color = 'blue';
-          break;
-      }
-    },
   },
 };
 </script>
