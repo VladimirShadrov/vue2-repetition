@@ -14,7 +14,7 @@
     </h4>
     <br />
 
-    <input type="text" /><br /><br />
+    <input v-model.lazy="inputValue" type="text" /><br /><br />
 
     <!-- СЮДА ВЫВЕСТИ ТЕКСТ -->
     <h2>{{ inputValue }}</h2>
@@ -28,6 +28,11 @@ export default {
     return {
       inputValue: 'Some value: ',
     };
+  },
+  methods: {
+    changeValue(event) {
+      this.inputValue = event.target.value;
+    },
   },
 };
 </script>
