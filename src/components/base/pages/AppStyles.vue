@@ -26,10 +26,10 @@
     </h4>
     <br /><br />
     <div class="wrapper">
-      <div class="circle">1</div>
-      <div class="circle">2</div>
+      <div @click="isActive = !isActive" :class="dynamicClasses" class="circle">1</div>
+      <div :class="!activeClass.length ? 'red' : activeClass" class="circle">2</div>
       <br /><br />
-      <input type="text" class="input" placeholder="class name" />
+      <input v-model="activeClass" type="text" class="input" placeholder="class name" />
     </div>
     <br /><br />
 
@@ -45,11 +45,11 @@
     <br /><br />
 
     <div class="wrapper">
-      <div class="circle">1</div>
-      <div class="circle">2</div>
+      <div :style="dynamicStyles1" class="circle">1</div>
+      <div :style="dynamicStyles2" class="circle">2</div>
       <br /><br />
-      <input type="text" class="input" placeholder="style value" />
-      <input type="text" class="input" placeholder="height" />
+      <input v-model="color" type="text" class="input" placeholder="style value" />
+      <input v-model.lazy="height" type="text" class="input" placeholder="height" />
     </div>
   </div>
 </template>
@@ -63,6 +63,27 @@ export default {
       color: '',
       height: '',
     };
+  },
+  computed: {
+    dynamicClasses() {
+      return {
+        purple: this.isActive,
+        blue: !this.isActive,
+      };
+    },
+    dynamicStyles1() {
+      return {
+        background: this.color,
+        height: this.height + 'px',
+      };
+    },
+    dynamicStyles2() {
+      return {
+        background: this.color,
+        height: this.height + 'px',
+        width: this.height + 'px',
+      };
+    },
   },
 };
 </script>
