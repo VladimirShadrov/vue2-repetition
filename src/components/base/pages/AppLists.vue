@@ -14,7 +14,7 @@
     <br />
 
     <!-- РЕШЕНИЕ ЗАДАЧИ 1 -->
-    <h3></h3>
+    <h3 v-for="(item, index) in people" :key="index">{{ index + 1 }}. {{ item.name }}, {{ item.job }}</h3>
     <br /><br />
 
     <h4>
@@ -24,7 +24,7 @@
     <br />
 
     <!-- РЕШЕНИЕ ЗАДАЧИ 2 -->
-    <h3></h3>
+    <h3 v-for="(value, key, index) in person" :key="value">{{ index + 1 }}. {{ key }}: {{ value }}</h3>
   </div>
 </template>
 
@@ -36,26 +36,26 @@ export default {
       people: [
         {
           name: 'Вова',
-          job: 'Frontend',
+          job: 'Frontend (Exist.ru)',
         },
         {
           name: 'Лена',
-          job: 'Подбор персонала',
+          job: 'Подбор персонала (Болевар)',
         },
         {
           name: 'Юля',
-          job: 'Логопед-студент',
+          job: 'Логопед-студент (МПГУ)',
         },
         {
           name: 'Оля',
-          job: 'Школьник',
+          job: 'Химик-студент (МИРЭА)',
         },
       ],
       person: {
         name: 'Владимир',
         age: 48,
         job: 'Frontend',
-        company: 'IMC',
+        company: 'Exist.ru',
       },
     };
   },
