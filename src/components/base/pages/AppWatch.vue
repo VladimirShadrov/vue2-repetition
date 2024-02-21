@@ -45,7 +45,7 @@
     </div>
     <br />
 
-    <button class="button">Увеличить 2</button><br /><br />
+    <button @click="counters.counter2++" class="button">Увеличить 2</button><br /><br />
 
     <p>
       Текущее значение счетчика 2: <b>{{ counters.counter2Value }}</b>
@@ -65,6 +65,14 @@ export default {
         counter2Value: 0,
       },
     };
+  },
+  watch: {
+    counters: {
+      handler: function () {
+        this.counters.counter2Value = this.counters.counter2;
+      },
+      deep: true,
+    },
   },
 };
 </script>
