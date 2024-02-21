@@ -9,10 +9,10 @@
     <h4>Задача: При клике по кнопке "Изменить" изменить текст и цвет заголовка</h4>
     <br />
 
-    <h1 ref="title">{{ title }}</h1>
+    <h1 ref="myTitle">{{ title }}</h1>
     <br />
 
-    <button class="button">Изменить</button>
+    <button @click="showRefs" class="button">Изменить</button>
   </div>
 </template>
 
@@ -25,7 +25,13 @@ export default {
       changed: true,
     };
   },
-  methods: {},
+  methods: {
+    showRefs() {
+      const { myTitle } = this.$refs;
+      myTitle.innerText = 'Новый текст заголовка';
+      myTitle.style.color = 'blue';
+    },
+  },
 };
 </script>
 
