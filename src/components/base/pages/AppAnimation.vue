@@ -49,15 +49,13 @@
     <br />
 
     <!-- ЗДЕСЬ КОД ДЛЯ РЕШЕНИЯ ЗАДАНИЯ -->
-    <input @keydown.enter="addNews" v-model="news" type="text" style="padding: 4px 8px" placeholder="Введите фразу..." /><br /><br />
+    <input type="text" style="padding: 4px 8px" placeholder="Введите фразу..." /><br /><br />
     <hr />
     <br />
 
-    <h4 v-if="!newsArr.length">Новостей пока нет...</h4>
+    <h4>Новостей пока нет...</h4>
     <!-- СЮДА ДОБАВИТЬ СПИСОК -->
-    <transition-group name="list">
-      <h4 v-for="(news, index) in newsArr" :key="news.id">{{ index + 1 }}. {{ news.news }}</h4>
-    </transition-group>
+    <h4></h4>
 
     <!-- КОНЕЦ РЕШЕНИЯ -->
     <div style="margin-bottom: 300px"></div>
@@ -74,29 +72,8 @@ export default {
       id: 0,
     };
   },
-  methods: {
-    addNews() {
-      if (!this.news) {
-        return;
-      }
-      this.newsArr.push({
-        id: this.id,
-        news: this.news,
-      });
-      this.id++;
-      this.news = '';
-    },
-  },
+  methods: {},
 };
 </script>
 
-<style scoped>
-.list-enter-active,
-.list-leave-active {
-  transition: all 1s;
-}
-.list-enter, .list-leave-to /* .list-leave-active до версии 2.1.8 */ {
-  opacity: 0;
-  transform: translateX(-30px);
-}
-</style>
+<style scoped></style>
