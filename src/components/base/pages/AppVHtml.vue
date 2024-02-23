@@ -9,7 +9,7 @@
     <br />
 
     <!-- ЗДЕСЬ ПИСАТЬ РЕШЕНИЕ -->
-    <h1></h1>
+    <h1 v-html="template"></h1>
   </div>
 </template>
 
