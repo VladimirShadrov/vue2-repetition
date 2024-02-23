@@ -7,11 +7,14 @@
 
     <h4>Задача: Подменить атрибут href у ссылки</h4>
     <br />
+    <h4>1. Сделать так, чтобы ссылка открывала страницу Google</h4>
+    <h4>2. При клике на кнопке "Подменить на Яндекс" изменить текст ссылки и атрибут href</h4>
+    <br />
 
     <h2 style="margin-bottom: 30px">
-      <a :href="hrefValue" target="blank">{{ linkName }}</a>
+      <a Жhref="hrefValue" target="blank">{{ linkName }}</a>
     </h2>
-    <button @click="changeLink" class="button">Подменить на Яндекc</button>
+    <button class="button">Подменить на Яндекc</button>
   </div>
 </template>
 
