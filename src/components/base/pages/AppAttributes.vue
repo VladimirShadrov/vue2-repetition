@@ -8,9 +8,10 @@
     <h4>Задача: Подменить атрибут href у ссылки</h4>
     <br />
 
-    <h2>
-      <a href="#" target="blank">Google</a>
+    <h2 style="margin-bottom: 30px">
+      <a :href="hrefValue" target="blank">{{ linkName }}</a>
     </h2>
+    <button @click="changeLink" class="button">Подменить на Яндекc</button>
   </div>
 </template>
 
@@ -19,8 +20,14 @@ export default {
   name: 'app-dynamic-attributes',
   data() {
     return {
+      linkName: 'Google',
       hrefValue: 'https://google.com',
     };
+  },
+  methods: {
+    changeLink() {
+      (this.linkName = 'Яндекс'), (this.hrefValue = 'https://yandex.ru');
+    },
   },
 };
 </script>
