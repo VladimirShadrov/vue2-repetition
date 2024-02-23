@@ -55,7 +55,9 @@
 
     <h4 v-if="!newsArr.length">Новостей пока нет...</h4>
     <!-- СЮДА ДОБАВИТЬ СПИСОК -->
-    <h4></h4>
+    <transition-group name="list">
+      <h4 v-for="(news, index) in newsArr" :key="news.id">{{ index + 1 }}. {{ news.news }}</h4>
+    </transition-group>
 
     <!-- КОНЕЦ РЕШЕНИЯ -->
     <div style="margin-bottom: 300px"></div>
@@ -74,20 +76,27 @@ export default {
   },
   methods: {
     addNews() {
-      const news = {
-        id: this.id,
-        text: this.news,
-      };
-      if (this.news.length) {
-        this.newsArr.push(news);
-        this.id++;
-        this.news = '';
-      } else {
+      if (!this.news) {
         return;
       }
+      this.newsArr.push({
+        id: this.id,
+        news: this.news,
+      });
+      this.id++;
+      this.news = '';
     },
   },
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.list-enter-active,
+.list-leave-active {
+  transition: all 1s;
+}
+.list-enter, .list-leave-to /* .list-leave-active до версии 2.1.8 */ {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+</style>
