@@ -13,11 +13,11 @@
     <br />
 
     <!-- РЕШЕНИЕ. ЗАДАЧА 1 -->
-    <h2 @mouseenter="changeColor">Counter: {{ counter }}</h2>
+    <h2>Counter: {{ counter }}</h2>
     <br />
 
-    <button @click="counter++" class="button">Увеличить</button>
-    <button @click="counter--" class="button">Уменьшить</button><br /><br />
+    <button class="button">Увеличить</button>
+    <button class="button">Уменьшить</button><br /><br />
     <hr />
     <br />
 
@@ -35,8 +35,8 @@
     <h2>Counter2 {{ title }}: {{ counter2 }}</h2>
     <br />
 
-    <button @click="changeCounter(5, $event)" class="button">Увеличить на 5</button>
-    <button @click="changeCounter(10, $event)" class="button">Увеличить на 10</button><br /><br />
+    <button class="button">Увеличить на 5</button>
+    <button class="button">Увеличить на 10</button><br /><br />
     <hr />
     <br />
 
@@ -48,7 +48,7 @@
 
     <!-- РЕШЕНИЕ. ЗАДАЧА 3 -->
     <h3>
-      <a @click.prevent="" href="https://yandex.ru" target="blank">Yandex</a>
+      <a href="https://yandex.ru" target="blank">Yandex</a>
     </h3>
     <br />
     <hr />
@@ -62,7 +62,7 @@
     <br />
 
     <!-- РЕШЕНИЕ. ЗАДАЧА 4 -->
-    <input @keyup.enter="addText" type="text" /><br /><br />
+    <input type="text" /><br /><br />
     <p>
       Вы ввели текст: <b>{{ inputText }}</b>
     </p>
@@ -79,19 +79,6 @@ export default {
       inputText: '',
       title: '',
     };
-  },
-  methods: {
-    changeColor(event) {
-      event.target.style.color = 'blue';
-    },
-    changeCounter(num, event) {
-      this.title = `Увеличен на ${num}`;
-      this.counter2 += num;
-      event.target.style.color = 'red';
-    },
-    addText(event) {
-      this.inputText = event.target.value;
-    },
   },
 };
 </script>
