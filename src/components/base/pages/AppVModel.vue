@@ -14,7 +14,7 @@
     </h4>
     <br />
 
-    <input v-model="inputValue" type="text" /><br /><br />
+    <input type="text" /><br /><br />
 
     <!-- СЮДА ВЫВЕСТИ ТЕКСТ -->
     <h2>{{ inputValue }}</h2>
