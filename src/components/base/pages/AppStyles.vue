@@ -26,10 +26,10 @@
     </h4>
     <br /><br />
     <div class="wrapper">
-      <div @click="isActive = !isActive" :class="{ purple: isActive, blue: !isActive }" class="circle">1</div>
-      <div :class="[activeClass ? activeClass : { purple: isActive, blue: !isActive }]" class="circle">2</div>
+      <div class="circle">1</div>
+      <div class="circle">2</div>
       <br /><br />
-      <input v-model="activeClass" type="text" class="input" placeholder="class name" />
+      <input type="text" class="input" placeholder="class name" />
     </div>
     <br /><br />
 
@@ -45,11 +45,11 @@
     <br /><br />
 
     <div class="wrapper">
-      <div :style="{ background: color, height: height + 'px' }" class="circle">1</div>
-      <div :style="{ background: color, height: height + 'px', width: height + 'px' }" class="circle">2</div>
+      <div class="circle">1</div>
+      <div class="circle">2</div>
       <br /><br />
-      <input v-model="color" type="text" class="input" placeholder="style value" />
-      <input v-model="height" type="text" class="input" placeholder="height" />
+      <input type="text" class="input" placeholder="style value" />
+      <input type="text" class="input" placeholder="height" />
     </div>
   </div>
 </template>
