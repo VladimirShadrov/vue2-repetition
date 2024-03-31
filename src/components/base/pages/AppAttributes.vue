@@ -12,9 +12,9 @@
     <br />
 
     <h2 style="margin-bottom: 30px">
-      <a :href="hrefValue" target="blank">{{ linkName }}</a>
+      <a href="#" target="blank">{{ linkName }}</a>
     </h2>
-    <button @click="changeLink" class="button">Подменить на Яндекc</button>
+    <button class="button">Подменить на Яндекc</button>
   </div>
 </template>
 
