@@ -28,9 +28,7 @@ export default {
     };
   },
   methods: {
-    changeLink() {
-      (this.linkName = 'Яндекс'), (this.hrefValue = 'https://yandex.ru');
-    },
+    changeLink() {},
   },
 };
 </script>
