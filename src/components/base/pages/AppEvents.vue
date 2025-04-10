@@ -32,7 +32,7 @@
     <br />
 
     <!-- РЕШЕНИЕ. ЗАДАЧА 2 -->
-    <h2>Counter2 {{ title }}: {{ counter2 }}</h2>
+    <h2>Counter2 = {{ counter2 }} {{ title }}</h2>
     <br />
 
     <button class="button">Увеличить на 5</button>
