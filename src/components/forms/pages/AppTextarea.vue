@@ -25,7 +25,9 @@
 <script>
 export default {
   name: 'app-textarea',
-  data() {},
+  data() {
+    return {};
+  },
 };
 </script>
 
